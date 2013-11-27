@@ -1,0 +1,21 @@
+[user]
+    name = Jaap Verloop
+    email = j.verloop@gmail.com
+[core]
+    editor = vim
+    autocrlf = false
+    safecrlf = false
+    excludesfile = ~/.gitignore
+[color]
+    ui = true
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+[mergetool]
+    prompt = false
+[alias]
+    hist = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --color --graph --abbrev-commit --date=short

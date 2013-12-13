@@ -79,3 +79,7 @@ set writebackup
 " VIM Airline
 let g:airline_left_sep=''
 let g:airline_right_sep=''
+
+" Syntastic
+g:syntastic_check_on_open=0
+

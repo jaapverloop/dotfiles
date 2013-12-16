@@ -81,5 +81,5 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 
 " Syntastic
-g:syntastic_check_on_open=0
+let g:syntastic_check_on_open=0
 

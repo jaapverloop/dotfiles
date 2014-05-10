@@ -79,6 +79,17 @@ set backup
 set undofile
 set writebackup
 
+" Indenting
+autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType css setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType less setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType coffee setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd FileType json setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
 " Syntastic
 let g:syntastic_check_on_open=0
 

@@ -79,10 +79,6 @@ set backup
 set undofile
 set writebackup
 
-" VIM Airline
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-
 " Syntastic
 let g:syntastic_check_on_open=0
 

@@ -7,7 +7,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'bling/vim-airline'
+Bundle 'itchyny/lightline.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'

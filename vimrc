@@ -18,6 +18,7 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'majutsushi/tagbar'
 
 " Solarized theme
+set t_Co=16
 set background=dark
 colorscheme solarized
 

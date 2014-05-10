@@ -28,11 +28,9 @@ alias tmux="tmux -2"
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
 
 # virtualenvwrapper
-if [[ `id -u` != '0' && -f /usr/local/bin/virtualenvwrapper.sh ]]; then
-    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-    export VIRTUALENV_USE_DISTRIBUTE=1
+if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
     export WORKON_HOME=$HOME/.virtualenvs
+    export PROJECT_HOME=$HOME/Development
     source /usr/local/bin/virtualenvwrapper.sh
-    export PIP_VIRTUALENV_BASE=$WORKON_HOME
-    export PIP_RESPECT_VIRTUALENV=true
 fi
+

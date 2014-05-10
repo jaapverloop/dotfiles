@@ -15,6 +15,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'kien/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'majutsushi/tagbar'
 
 " Solarized theme
 set background=dark

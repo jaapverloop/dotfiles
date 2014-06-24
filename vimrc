@@ -16,6 +16,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'majutsushi/tagbar'
+Bundle 'mattn/emmet-vim'
 
 " Solarized theme
 set t_Co=16

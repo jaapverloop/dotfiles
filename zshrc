@@ -16,6 +16,7 @@ antigen theme ys
 antigen apply
 
 export PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
+export PATH="/usr/local/bin:/usr/local/sbin:~/.composer/vendor/bin:${PATH}"
 export EDITOR=vim
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8

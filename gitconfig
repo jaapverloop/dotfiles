@@ -1,6 +1,8 @@
 [user]
     name = Jaap Verloop
     email = j.verloop@gmail.com
+[github]
+    user = jaapverloop
 [core]
     editor = vim
     autocrlf = false

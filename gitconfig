@@ -9,8 +9,6 @@
     safecrlf = false
     excludesfile = ~/.gitignore
     pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less
-[push]
-    default = simple
 [color]
     ui = true
 [diff]

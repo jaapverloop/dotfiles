@@ -15,8 +15,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme ys
 antigen apply
 
-export PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
-export PATH="/usr/local/bin:/usr/local/sbin:~/.composer/vendor/bin:${PATH}"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export EDITOR=vim
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8

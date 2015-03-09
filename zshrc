@@ -16,6 +16,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme ys
 antigen apply
 
+bindkey "^R" history-incremental-search-backward
+
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"

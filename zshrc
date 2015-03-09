@@ -49,4 +49,3 @@ if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
     export PROJECT_HOME=$HOME/Development
     source /usr/local/bin/virtualenvwrapper.sh
 fi
-

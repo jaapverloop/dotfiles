@@ -26,7 +26,3 @@ ln -s `pwd`/gitignore ~/.gitignore
 # setup tmux
 rm ~/.tmux.conf
 ln -s `pwd`/tmux.conf ~/.tmux.conf
-
-# setup slate
-rm ~/.slate
-ln -s `pwd`/slate ~/.slate

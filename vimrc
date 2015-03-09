@@ -19,6 +19,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/emmet-vim'
 Plugin 'gabrielelana/vim-markdown'
+Plugin 'wting/rust.vim'
 
 call vundle#end()
 

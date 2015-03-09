@@ -4,6 +4,7 @@ antigen use oh-my-zsh
 
 antigen bundle brew
 antigen bundle git
+antigen bundle jump
 antigen bundle pip
 antigen bundle sublime
 antigen bundle tmux

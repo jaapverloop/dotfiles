@@ -34,6 +34,11 @@ alias tmux="tmux -2"
 
 # Pythonz
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
+# nvm
+if [[ -f $(brew --prefix nvm)/nvm.sh ]]; then
+    export NVM_DIR="$HOME/.nvm"
+    source $(brew --prefix nvm)/nvm.sh
+fi
 
 # virtualenvwrapper
 if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then

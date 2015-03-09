@@ -25,7 +25,7 @@ call vundle#end()
 
 " Colorscheme
 set background=dark
-colorscheme base16-default
+colorscheme base16-monokai
 
 " Settings
 syntax on

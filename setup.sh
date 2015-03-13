@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+SCRIPTPATH=$(cd "$(dirname "${0}")"; echo $(pwd))
+
+pushd $SCRIPTPATH
+
 # load submodules
 git submodule init
 git submodule update
@@ -26,3 +30,5 @@ ln -s `pwd`/gitignore ~/.gitignore
 # setup tmux
 rm ~/.tmux.conf
 ln -s `pwd`/tmux.conf ~/.tmux.conf
+
+popd

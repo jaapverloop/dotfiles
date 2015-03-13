@@ -8,10 +8,12 @@ pushd $SCRIPTPATH
 git submodule init
 git submodule update
 
-# setup zsh
+# setup antigen
 rm -rf ~/.antigen
-rm ~/.zshrc
 ln -s `pwd`/antigen ~/.antigen
+
+# setup zsh
+rm ~/.zshrc
 ln -s `pwd`/zshrc ~/.zshrc
 
 # setup vim

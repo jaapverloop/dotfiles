@@ -1,7 +1,5 @@
-SCRIPTPATH=$(cd "$(dirname "${0}")"; echo $(pwd))
-
-source $SCRIPTPATH/.base16-shell/base16-summerfruit.dark.sh
-source $SCRIPTPATH/.antigen/antigen.zsh
+source ~/.base16-shell/base16-summerfruit.dark.sh
+source ~/.antigen/antigen.zsh
 
 antigen use oh-my-zsh
 

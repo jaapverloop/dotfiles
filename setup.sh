@@ -8,6 +8,10 @@ pushd $SCRIPTPATH
 git submodule init
 git submodule update
 
+# setup base16-shell
+rm -rf ~/.base16-shell
+ln -s `pwd`/base16-shell ~/.base16-shell
+
 # setup antigen
 rm -rf ~/.antigen
 ln -s `pwd`/antigen ~/.antigen

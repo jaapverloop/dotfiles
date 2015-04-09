@@ -22,6 +22,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'mattn/emmet-vim'
 Plugin 'gabrielelana/vim-markdown'
 Plugin 'wting/rust.vim'
+Plugin 'mileszs/ack.vim'
 
 call vundle#end()
 

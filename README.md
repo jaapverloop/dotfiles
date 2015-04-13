@@ -1,11 +1,9 @@
-Dotfiles
-========
+#Dotfiles
 
 My personal dotfiles.
 
 
-Installation
-------------
+##Installation
 
 Open a terminal and execute the following commands:
 
@@ -17,8 +15,7 @@ setup.sh
 ```
 
 
-Updating
---------
+##Updating
 
 Open a terminal and execute the following commands:
 
@@ -29,7 +26,6 @@ setup.sh
 ```
 
 
-License
--------
+##License
 
 MIT, see **LICENSE** for more details.

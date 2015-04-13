@@ -2,10 +2,6 @@
 
 SCRIPTPATH=$(cd "$(dirname "${0}")"; echo $(pwd))
 
-# load submodules
-git submodule init
-git submodule update
-
 # setup base16-shell
 rm -rf ~/.base16-shell
 ln -s $SCRIPTPATH/base16-shell ~/.base16-shell

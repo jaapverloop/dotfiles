@@ -27,3 +27,9 @@ cd ~/code/dotfiles
 git submodule update --init --recursive
 setup.sh
 ```
+
+
+License
+-------
+
+MIT, see **LICENSE** for more details.

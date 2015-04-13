@@ -1,23 +1,6 @@
 source ~/.base16-shell/base16-summerfruit.dark.sh
-source ~/.antigen/antigen.zsh
-
-antigen use oh-my-zsh
-
-antigen bundle brew
-antigen bundle git
-antigen bundle jump
-antigen bundle pip
-antigen bundle sublime
-antigen bundle tmux
-antigen bundle vagrant
-antigen bundle vi-mode
-antigen bundle vundle
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-antigen theme ys
-antigen apply
-
 bindkey "^R" history-incremental-search-backward
+source ~/.zprezto/init.zsh
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 export PATH="$HOME/.composer/vendor/bin:$PATH"

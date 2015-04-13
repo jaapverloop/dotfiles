@@ -10,9 +10,11 @@ git submodule update
 rm -rf ~/.base16-shell
 ln -s $SCRIPTPATH/base16-shell ~/.base16-shell
 
-# setup antigen
-rm -rf ~/.antigen
-ln -s $SCRIPTPATH/antigen ~/.antigen
+# setup prezto
+rm -rf ~/.zprezto
+rm -rf ~/.zpreztorc
+ln -s $SCRIPTPATH/prezto ~/.zprezto
+ln -s $SCRIPTPATH/zpreztorc ~/.zpreztorc
 
 # setup zsh
 rm ~/.zshrc

@@ -11,7 +11,7 @@ Open a terminal and execute the following commands:
 cd ~/code
 git clone --recursive https://github.com/jaapverloop/dotfiles.git
 cd dotfiles
-setup.sh
+./setup.sh
 ```
 
 
@@ -22,7 +22,7 @@ Open a terminal and execute the following commands:
 ```sh
 cd ~/code/dotfiles
 git submodule update --init --recursive
-setup.sh
+./setup.sh
 ```
 
 

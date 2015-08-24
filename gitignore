@@ -13,3 +13,4 @@ Thumbs.db
 *.sublime-workspace
 
 junk/
+vim/.netrwhist

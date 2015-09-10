@@ -18,8 +18,9 @@ if [[ -f $HOME/.pythonz/etc/bashrc ]]; then
     source $HOME/.pythonz/etc/bashrc
 fi
 
-if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
+if [[ -f $HOME/.local/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh ]]; then
     export WORKON_HOME=$HOME/.virtualenvs
     export PROJECT_HOME=$HOME/Development
-    source /usr/local/bin/virtualenvwrapper.sh
+    export VIRTUALENVWRAPPER_PYTHON=$HOME/.local/venvs/virtualenvwrapper/bin/python
+    source $HOME/.local/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh
 fi

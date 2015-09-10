@@ -2,9 +2,9 @@
 
 SCRIPTPATH=$(cd "$(dirname "${0}")"; echo $(pwd))
 
-# setup base16-shell
-rm -rf ~/.base16-shell
-ln -s $SCRIPTPATH/base16-shell ~/.base16-shell
+# create symlink to this repo
+rm -rf ~/.dotfiles
+ln -s $SCRIPTPATH ~/.dotfiles
 
 # setup prezto
 rm -rf ~/.zprezto
@@ -21,7 +21,7 @@ rm -rf ~/.vim
 rm ~/.vimrc
 ln -s $SCRIPTPATH/vim ~/.vim
 ln -s $SCRIPTPATH/vimrc ~/.vimrc
-vim +PluginInstall +qall &> /dev/null &
+vim +PlugInstall +qall &> /dev/null &
 
 # setup git
 rm ~/.gitconfig

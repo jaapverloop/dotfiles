@@ -1,4 +1,4 @@
-source ~/.base16-shell/base16-summerfruit.dark.sh
+source ~/.dotfiles/base16-shell/base16-summerfruit.dark.sh
 source ~/.zprezto/init.zsh
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"

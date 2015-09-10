@@ -1,4 +1,5 @@
 source ~/.dotfiles/base16-shell/base16-summerfruit.dark.sh
+source ~/.dotfiles/zsh-git-prompt/zshrc.sh
 source ~/.zprezto/init.zsh
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
@@ -24,3 +25,19 @@ if [[ -f $HOME/.local/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh ]]; then
     export VIRTUALENVWRAPPER_PYTHON=$HOME/.local/venvs/virtualenvwrapper/bin/python
     source $HOME/.local/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh
 fi
+
+git_super_status() {
+    precmd_update_git_vars
+    if [ -n "$__CURRENT_GIT_STATUS" ]; then
+        if [ "$GIT_CHANGED" -eq "0" ] && [ "$GIT_CONFLICTS" -eq "0" ] && [ "$GIT_STAGED" -eq "0" ] && [ "$GIT_UNTRACKED" -eq "0" ]; then
+            STATUS="%F{044}($GIT_BRANCH)%f %F{035}●%f "
+        else
+            STATUS="%F{044}($GIT_BRANCH)%f %F{160}●%f "
+        fi
+        echo "$STATUS"
+    fi
+}
+
+function precmd {
+    PROMPT="%B%F{035}➜%b  %B%F{039}%~%b%f $(git_super_status)"
+}

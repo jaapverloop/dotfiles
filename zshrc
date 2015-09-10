@@ -5,6 +5,7 @@ source ~/.zprezto/init.zsh
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export VISUAL=vim
 export EDITOR=vim
 export LANG=en_US.UTF-8
 export DOCKER_HOST=tcp://192.168.59.103:2376

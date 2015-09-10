@@ -27,6 +27,14 @@ if [[ -f $HOME/.local/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh ]]; then
     source $HOME/.local/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh
 fi
 
+termcolors() {
+    for code in $(seq -w 0 255); do
+        for attr in 0 1; do
+            printf "%s-%03s %b●%b\n" "${attr}" "${code}" "\e[${attr};38;05;${code}m" "\e[m";
+        done;
+    done | column -c $((COLUMNS*2))
+}
+
 git_super_status() {
     precmd_update_git_vars
     if [ -n "$__CURRENT_GIT_STATUS" ]; then

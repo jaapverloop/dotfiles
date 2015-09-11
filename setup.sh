@@ -21,7 +21,6 @@ rm -rf ~/.vim
 rm ~/.vimrc
 ln -s $SCRIPTPATH/vim ~/.vim
 ln -s $SCRIPTPATH/vimrc ~/.vimrc
-vim +PlugInstall +qall &> /dev/null &
 
 # setup git
 rm ~/.gitconfig

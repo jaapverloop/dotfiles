@@ -6,8 +6,6 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'chriskempson/base16-vim'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'gabrielelana/vim-markdown'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
@@ -16,14 +14,14 @@ Plug 'junegunn/limelight.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/vimfiler.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 " Change leader and localleader
@@ -101,19 +99,16 @@ vnoremap <tab> %
 
 " Convenient mappings
 nnoremap <leader>ch :nohlsearch<CR>
-nnoremap <leader>nt :NERDTreeToggle<CR>
-nnoremap <leader>nf :NERDTreeFocus<CR>
-nnoremap <leader>nm :NERDTreeFind<CR>
+nnoremap <leader>fe :VimFiler<CR>
+nnoremap <leader>ff :Unite -start-insert file_rec<CR>
+nnoremap <leader>fb :Unite buffer<CR>
 nnoremap <leader>tb :TagbarToggle<CR>
-nnoremap <leader>ff :CtrlP<CR>
-nnoremap <leader>fb :CtrlPBuffer<CR>
-nnoremap <leader>fr :CtrlPMRU<CR>
 nnoremap <leader>gy :Goyo<CR>
 nnoremap <leader>ll :Limelight!!<CR>
 
 " Plugin settings
+let g:vimfiler_as_default_explorer = 1
 let g:syntastic_php_checkers = ['php']
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 " File locations
 " Disable swap files

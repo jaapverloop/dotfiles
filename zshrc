@@ -1,4 +1,4 @@
-source ~/.dotfiles/base16-shell/base16-summerfruit.dark.sh
+source ~/.dotfiles/base16-shell/base16-brewer.dark.sh
 source ~/.dotfiles/zsh-git-prompt/zshrc.sh
 source ~/.zprezto/init.zsh
 

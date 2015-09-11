@@ -47,6 +47,6 @@ git_super_status() {
     fi
 }
 
-function precmd {
+precmd() {
     PROMPT="%B%F{035}➜%b  %B%F{039}%~%b%f $(git_super_status)"
 }

@@ -23,7 +23,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'Valloric/YouCompleteMe'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 

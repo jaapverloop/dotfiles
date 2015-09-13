@@ -106,6 +106,7 @@ nnoremap <leader>fb :Unite buffer<CR>
 nnoremap <leader>tb :TagbarToggle<CR>
 nnoremap <leader>gy :Goyo<CR>
 nnoremap <leader>ll :Limelight!!<CR>
+nnoremap <silent> <Leader>rts :call RemoveTrailingSpaces()<CR>
 
 " Plugin settings
 let g:vimfiler_as_default_explorer = 1
@@ -132,3 +133,11 @@ autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2 expand
 autocmd FileType coffee setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd FileType json setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
+" Removes trailing spaces
+function! RemoveTrailingSpaces()
+    %s/\s\+$//e
+endfunction
+
+autocmd BufWritePre * :call RemoveTrailingSpaces()
+

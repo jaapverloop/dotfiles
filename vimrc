@@ -78,6 +78,7 @@ set shortmess+=I
 set colorcolumn=80
 set visualbell
 set noerrorbells
+set laststatus=2
 
 " Split windows below and right
 set splitbelow

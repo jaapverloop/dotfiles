@@ -46,7 +46,7 @@ set fileformats=unix,dos,mac
 set title
 set number
 set ruler
-set virtualedit=all
+set virtualedit=onemore
 set hidden
 set showmode
 set showcmd

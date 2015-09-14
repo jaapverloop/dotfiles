@@ -1,4 +1,3 @@
-source ~/.dotfiles/zsh-git-prompt/zshrc.sh
 # Manage plugins with ZGEN
 if [[ -f $HOME/.dotfiles/zgen/zgen.zsh ]]; then
     source $HOME/.dotfiles/zgen/zgen.zsh
@@ -6,6 +5,8 @@ if [[ -f $HOME/.dotfiles/zgen/zgen.zsh ]]; then
     if ! zgen saved; then
       echo "Creating a zgen save"
       zgen load zsh-users/zsh-syntax-highlighting
+      zgen load mafredri/zsh-async
+      zgen load sindresorhus/pure
       zgen save
     fi
 fi
@@ -41,20 +42,4 @@ termcolors() {
             printf "%s-%03s %b●%b\n" "${attr}" "${code}" "\e[${attr};38;05;${code}m" "\e[m";
         done;
     done | column -c $((COLUMNS*2))
-}
-
-git_super_status() {
-    precmd_update_git_vars
-    if [ -n "$__CURRENT_GIT_STATUS" ]; then
-        if [ "$GIT_CHANGED" -eq "0" ] && [ "$GIT_CONFLICTS" -eq "0" ] && [ "$GIT_STAGED" -eq "0" ] && [ "$GIT_UNTRACKED" -eq "0" ]; then
-            STATUS="%F{044}($GIT_BRANCH)%f %F{035}●%f "
-        else
-            STATUS="%F{044}($GIT_BRANCH)%f %F{160}●%f "
-        fi
-        echo "$STATUS"
-    fi
-}
-
-precmd() {
-    PROMPT="%B%F{035}➜%b  %B%F{039}%~%b%f $(git_super_status)"
 }

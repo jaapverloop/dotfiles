@@ -33,6 +33,32 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1024
 SAVEHIST=1024
 
+# ZSH options
+# See http://zsh.sourceforge.net/Doc/Release/Options.html
+setopt APPEND_HISTORY
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt EXTENDED_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_VERIFY
+setopt INC_APPEND_HISTORY
+setopt NOMATCH
+setopt NOTIFY
+setopt PUSHD_IGNORE_DUPS
+setopt PUSHD_SILENT
+setopt SHARE_HISTORY
+unsetopt BEEP
+unsetopt CHECK_JOBS
+unsetopt HIST_BEEP
+unsetopt HUP
+unsetopt LIST_BEEP
+
 if [[ -f $HOME/.fzf.zsh ]]; then
     source $HOME/.fzf.zsh
 fi

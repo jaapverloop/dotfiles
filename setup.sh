@@ -6,12 +6,6 @@ SCRIPTPATH=$(cd "$(dirname "${0}")"; echo $(pwd))
 rm -rf ~/.dotfiles
 ln -s $SCRIPTPATH ~/.dotfiles
 
-# setup prezto
-rm -rf ~/.zprezto
-rm -rf ~/.zpreztorc
-ln -s $SCRIPTPATH/prezto ~/.zprezto
-ln -s $SCRIPTPATH/zpreztorc ~/.zpreztorc
-
 # setup zsh
 rm ~/.zshrc
 ln -s $SCRIPTPATH/zshrc ~/.zshrc

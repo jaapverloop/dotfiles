@@ -25,6 +25,9 @@ export DOCKER_TLS_VERIFY=1
 alias ls='ls -G'
 alias ll='ls -l'
 
+# VIM bindings
+bindkey -e
+
 if [[ -f $HOME/.fzf.zsh ]]; then
     source $HOME/.fzf.zsh
 fi

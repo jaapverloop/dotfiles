@@ -40,6 +40,7 @@ if [[ -f $HOME/.local/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh ]]; then
     source $HOME/.local/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh
 fi
 
+# Print the 256 terminal colors (normal and bright)
 termcolors() {
     for code in $(seq -w 0 255); do
         for attr in 0 1; do

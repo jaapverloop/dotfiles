@@ -5,7 +5,6 @@ set nocompatible
 " Managed by vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
-Plug 'chriskempson/base16-vim'
 Plug 'gabrielelana/vim-markdown'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
@@ -22,6 +21,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'whatyouhide/vim-gotham'
 call plug#end()
 
 " Change leader and localleader
@@ -29,10 +29,7 @@ let mapleader=","
 let maplocalleader="\\"
 
 " Colorscheme
-let base16colorspace=256
-let g:base16_shell_path='~/.dotfiles/base16-shell'
-set background=dark
-colorscheme base16-brewer
+colorscheme gotham
 
 " Enable syntax and filetype plugins
 syntax on
@@ -111,6 +108,7 @@ nnoremap <silent> <Leader>rts :call RemoveTrailingSpaces()<CR>
 " Plugin settings
 let g:vimfiler_as_default_explorer = 1
 let g:syntastic_php_checkers = ['php']
+let g:lightline = { 'colorscheme': 'gotham' }
 
 " File locations
 " Disable swap files

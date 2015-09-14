@@ -26,6 +26,14 @@ git submodule update --init --recursive
 ```
 
 
+#Note
+
+The color preset **gotham* * for iTerm is taken from the [gotham-contrib] repository.
+
+
 ##License
 
 MIT, see **LICENSE** for more details.
+
+
+[gotham-contrib]: https://github.com/whatyouhide/gotham-contrib

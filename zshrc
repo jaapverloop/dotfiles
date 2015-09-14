@@ -1,4 +1,3 @@
-source ~/.dotfiles/base16-shell/base16-brewer.dark.sh
 source ~/.dotfiles/zsh-git-prompt/zshrc.sh
 # Manage plugins with ZGEN
 if [[ -f $HOME/.dotfiles/zgen/zgen.zsh ]]; then

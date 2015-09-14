@@ -28,6 +28,11 @@ alias ll='ls -l'
 # VIM bindings
 bindkey -e
 
+# History file
+HISTFILE=~/.zsh_history
+HISTSIZE=1024
+SAVEHIST=1024
+
 if [[ -f $HOME/.fzf.zsh ]]; then
     source $HOME/.fzf.zsh
 fi

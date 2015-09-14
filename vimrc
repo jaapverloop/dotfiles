@@ -103,6 +103,7 @@ nnoremap <leader>fb :Unite buffer<CR>
 nnoremap <leader>tb :TagbarToggle<CR>
 nnoremap <leader>gy :Goyo<CR>
 nnoremap <leader>ll :Limelight!!<CR>
+nnoremap <leader>cw :ene<CR>:bw #<CR>
 nnoremap <silent> <Leader>rts :call RemoveTrailingSpaces()<CR>
 
 " Plugin settings

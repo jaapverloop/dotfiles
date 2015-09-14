@@ -1,6 +1,15 @@
 source ~/.dotfiles/base16-shell/base16-brewer.dark.sh
 source ~/.dotfiles/zsh-git-prompt/zshrc.sh
-source ~/.zprezto/init.zsh
+# Manage plugins with ZGEN
+if [[ -f $HOME/.dotfiles/zgen/zgen.zsh ]]; then
+    source $HOME/.dotfiles/zgen/zgen.zsh
+
+    if ! zgen saved; then
+      echo "Creating a zgen save"
+      zgen load zsh-users/zsh-syntax-highlighting
+      zgen save
+    fi
+fi
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 export PATH="$HOME/.composer/vendor/bin:$PATH"

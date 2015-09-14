@@ -26,7 +26,7 @@ alias ls='ls -G'
 alias ll='ls -l'
 
 # VIM bindings
-bindkey -e
+bindkey -v
 
 # History file
 HISTFILE=~/.zsh_history

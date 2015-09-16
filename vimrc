@@ -5,6 +5,7 @@ set nocompatible
 " Managed by vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'gabrielelana/vim-markdown'
 Plug 'itchyny/lightline.vim'
@@ -62,13 +63,6 @@ set wildignore=*.o,*~,*.pyc
 set list
 set listchars=tab:▸\ ,trail:.
 set nowrap
-set autoindent
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set smarttab
-set shiftround
 set history=1000
 set undolevels=1000
 set gdefault
@@ -111,9 +105,9 @@ nnoremap <leader>tb :TagbarToggle<CR>
 nnoremap <leader>gy :Goyo<CR>
 nnoremap <leader>ll :Limelight!!<CR>
 nnoremap <leader>cw :ene<CR>:bw #<CR>
-nnoremap <silent> <Leader>rts :call RemoveTrailingSpaces()<CR>
 
 " Plugin settings
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:vimfiler_as_default_explorer = 1
 let g:syntastic_php_checkers = ['php']
 let g:lightline = { 'colorscheme': 'gotham' }
@@ -128,22 +122,3 @@ set noswapfile
 set nobackup
 set nowritebackup
 set undofile
-
-" Indenting
-autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-autocmd FileType css setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-autocmd FileType less setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-autocmd FileType coffee setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-autocmd FileType json setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-
-" Removes trailing spaces
-function! RemoveTrailingSpaces()
-    %s/\s\+$//e
-endfunction
-
-autocmd BufWritePre * :call RemoveTrailingSpaces()
-

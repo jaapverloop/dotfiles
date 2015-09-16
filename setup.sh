@@ -25,3 +25,7 @@ ln -s $SCRIPTPATH/gitignore ~/.gitignore
 # setup tmux
 rm ~/.tmux.conf
 ln -s $SCRIPTPATH/tmux.conf ~/.tmux.conf
+
+# setup editorconfig
+rm ~/.editorconfig
+ln -s $SCRIPTPATH/editorconfig ~/.editorconfig

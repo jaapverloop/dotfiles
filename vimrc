@@ -98,7 +98,6 @@ nnoremap <leader>fb :Unite buffer<CR>
 nnoremap <leader>tb :TagbarToggle<CR>
 nnoremap <leader>gy :Goyo<CR>
 nnoremap <leader>ll :Limelight!!<CR>
-nnoremap <leader>cw :ene<CR>:bw #<CR>
 
 " Plugin settings
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']

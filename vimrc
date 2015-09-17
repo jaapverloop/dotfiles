@@ -25,6 +25,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'whatyouhide/vim-gotham'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 " Change leader and localleader

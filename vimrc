@@ -82,12 +82,6 @@ map <C-k> <C-w>k
 map <C-h> <C-w>h
 map <C-l> <C-w>l
 
-" Easy window resizing
-map <C-S-j> <C-w>-
-map <C-S-k> <C-w>+
-map <C-S-h> <C-w><
-map <C-S-l> <C-w>>
-
 " Normal regexes for searching
 nnoremap / /\v
 vnoremap / /\v

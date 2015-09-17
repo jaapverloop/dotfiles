@@ -98,7 +98,7 @@ vnoremap <tab> %
 
 " Convenient mappings
 nnoremap <leader>ch :nohlsearch<CR>
-nnoremap <leader>fe :VimFiler<CR>
+nnoremap <leader>fe :VimFilerExplorer<CR>
 nnoremap <leader>ff :Unite -start-insert file_rec<CR>
 nnoremap <leader>fb :Unite buffer<CR>
 nnoremap <leader>tb :TagbarToggle<CR>

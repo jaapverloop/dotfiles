@@ -64,6 +64,13 @@ set wildignore=*.o,*~,*.pyc
 set list
 set listchars=tab:▸\ ,trail:.
 set nowrap
+set autoindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set smarttab
+set shiftround
 set history=1000
 set undolevels=1000
 set gdefault

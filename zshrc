@@ -6,6 +6,7 @@ if [[ -f $HOME/.dotfiles/zgen/zgen.zsh ]]; then
       echo "Creating a zgen save"
       zgen load zsh-users/zsh-syntax-highlighting
       zgen load rupa/z
+      zgen load rimraf/k
       zgen load mafredri/zsh-async
       zgen load sindresorhus/pure
       zgen save

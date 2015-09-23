@@ -95,10 +95,6 @@ map <C-l> <C-w>l
 nnoremap / /\v
 vnoremap / /\v
 
-" Go to matching bracket with tab
-nnoremap <tab> %
-vnoremap <tab> %
-
 " Convenient mappings
 nnoremap <leader>ch :nohlsearch<CR>
 nnoremap <leader>fe :VimFilerExplorer<CR>

@@ -23,6 +23,6 @@
 [alias]
     hist = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --color --graph --abbrev-commit --date=short
 [push]
-      default = current
+    default = current
 [pull]
-      default = current
+    default = current

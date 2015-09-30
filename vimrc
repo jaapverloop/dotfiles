@@ -15,6 +15,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
@@ -99,6 +100,9 @@ nnoremap <leader>ch :nohlsearch<CR>
 nnoremap <leader>ff :CtrlP<CR>
 nnoremap <leader>fb :CtrlPBuffer<CR>
 nnoremap <leader>fr :CtrlPMRU<CR>
+nnoremap <leader>nt :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFocus<CR>
+nnoremap <leader>nm :NERDTreeFind<CR>
 nnoremap <leader>tb :TagbarToggle<CR>
 nnoremap <leader>gy :Goyo<CR>
 nnoremap <leader>ll :Limelight!!<CR>

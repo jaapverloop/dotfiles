@@ -18,8 +18,8 @@ if [[ -f $HOME/.fzf.bash ]]; then
     source $HOME/.fzf.bash
 fi
 
-if [[ -f $HOME/.nvm/nvm.sh ]]; then
-    source $HOME/.nvm/nvm.sh
+if [[ -f $HOME/.bin/nvm/nvm.sh ]]; then
+    source $HOME/.bin/nvm/nvm.sh
 fi
 
 if [[ -f $HOME/.pythonz/etc/bashrc ]]; then

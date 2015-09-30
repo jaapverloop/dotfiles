@@ -16,15 +16,15 @@ help:
 	@echo
 
 install-fzf:
-	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-	~/.fzf/install
+	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.bin/fzf
+	~/.bin/fzf/install
 
 install-homebrew:
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 install-nvm:
-	git clone https://github.com/creationix/nvm.git ~/.nvm \
-	&& cd ~/.nvm \
+	git clone https://github.com/creationix/nvm.git ~/.bin/nvm \
+	&& cd ~/.bin/nvm \
 	&& git checkout `git describe --abbrev=0 --tags`
 
 install-pipsi:

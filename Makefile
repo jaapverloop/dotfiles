@@ -3,7 +3,8 @@
 	install-homebrew \
 	install-nvm \
 	install-pipsi \
-	install-pythonz
+	install-pythonz \
+	install-z
 
 help:
 	@echo "Helpers to install additional software"
@@ -13,6 +14,7 @@ help:
 	@echo "+ nvm			: make install-nvm"
 	@echo "+ pipsi			: make install-pipsi"
 	@echo "+ pythonz		: make install-pythonz"
+	@echo "+ z				: make install-z"
 	@echo
 
 install-fzf:
@@ -32,3 +34,6 @@ install-pipsi:
 
 install-pythonz:
 	curl -kL https://raw.github.com/saghul/pythonz/master/pythonz-install | bash
+
+install-z:
+	git clone https://github.com/rupa/z.git ~/.bin/z

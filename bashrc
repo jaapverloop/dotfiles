@@ -14,6 +14,10 @@ alias ls='ls -G'
 alias ll='ls -l'
 alias tmux='tmux -2'
 
+if [[ -f $HOME/.bin/z/z.sh ]]; then
+    source $HOME/.bin/z/z.sh
+fi
+
 if [[ -f $HOME/.fzf.bash ]]; then
     source $HOME/.fzf.bash
 fi

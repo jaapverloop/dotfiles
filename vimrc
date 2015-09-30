@@ -5,6 +5,8 @@ set nocompatible
 " Managed by vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'gabrielelana/vim-markdown'
@@ -16,8 +18,6 @@ Plug 'mattn/emmet-vim'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/syntastic'
 Plug 'shawncplus/phpcomplete.vim'
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimfiler.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -97,16 +97,16 @@ vnoremap / /\v
 
 " Convenient mappings
 nnoremap <leader>ch :nohlsearch<CR>
-nnoremap <leader>fe :VimFilerExplorer<CR>
-nnoremap <leader>ff :Unite -start-insert file_rec<CR>
-nnoremap <leader>fb :Unite buffer<CR>
+nnoremap <leader>ff :CtrlP<CR>
+nnoremap <leader>fb :CtrlPBuffer<CR>
+nnoremap <leader>fr :CtrlPMRU<CR>
 nnoremap <leader>tb :TagbarToggle<CR>
 nnoremap <leader>gy :Goyo<CR>
 nnoremap <leader>ll :Limelight!!<CR>
 
 " Plugin settings
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
-let g:vimfiler_as_default_explorer = 1
 let g:syntastic_php_checkers = ['php']
 let g:lightline = { 'colorscheme': 'gotham' }
 

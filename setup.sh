@@ -6,9 +6,13 @@ SCRIPTPATH=$(cd "$(dirname "${0}")"; echo $(pwd))
 rm -rf ~/.dotfiles
 ln -s $SCRIPTPATH ~/.dotfiles
 
-# setup zsh
-rm ~/.zshrc
-ln -s $SCRIPTPATH/zshrc ~/.zshrc
+# setup bash
+rm ~/.bashrc
+rm ~/.bash_profile
+rm ~/.inputrc
+ln -s $SCRIPTPATH/bashrc ~/.bashrc
+ln -s $SCRIPTPATH/bash_profile ~/.bash_profile
+ln -s $SCRIPTPATH/inputrc ~/.inputrc
 
 # setup vim
 rm -rf ~/.vim

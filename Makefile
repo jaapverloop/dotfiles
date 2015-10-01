@@ -4,6 +4,7 @@
 	install-nvm \
 	install-pipsi \
 	install-pythonz \
+	install-sexybashprompt \
 	install-z
 
 help:
@@ -14,6 +15,7 @@ help:
 	@echo "+ nvm			: make install-nvm"
 	@echo "+ pipsi			: make install-pipsi"
 	@echo "+ pythonz		: make install-pythonz"
+	@echo "+ sexybashprompt	: make install-sexybashprompt"
 	@echo "+ z				: make install-z"
 	@echo
 
@@ -34,6 +36,9 @@ install-pipsi:
 
 install-pythonz:
 	curl -kL https://raw.github.com/saghul/pythonz/master/pythonz-install | bash
+
+install-sexybashprompt:
+	git clone https://github.com/twolfson/sexy-bash-prompt.git ~/.bin/sexy-bash-prompt
 
 install-z:
 	git clone https://github.com/rupa/z.git ~/.bin/z

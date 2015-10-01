@@ -37,7 +37,7 @@ if [[ -f $HOME/.local/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh ]]; then
     source $HOME/.local/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh
 fi
 
-if [[ -f $HOME/.dotfiles/sexy-bash-prompt/.bash_prompt ]]; then
+if [[ -f $HOME/.bin/sexy-bash-prompt/.bash_prompt ]]; then
     PROMPT_USER_COLOR="$(tput setaf 197)"
     PROMPT_PREPOSITION_COLOR="$(tput setaf 255)"
     PROMPT_DEVICE_COLOR="$(tput setaf 202)"
@@ -54,5 +54,5 @@ if [[ -f $HOME/.dotfiles/sexy-bash-prompt/.bash_prompt ]]; then
     PROMPT_UNPUSHED_UNPULLED_SYMBOL="*↑↓"
     PROMPT_DIRTY_UNPUSHED_UNPULLED_SYMBOL="*↑↓"
     PROMPT_SYMBOL="➜"
-    source $HOME/.dotfiles/sexy-bash-prompt/.bash_prompt
+    source $HOME/.bin/sexy-bash-prompt/.bash_prompt
 fi

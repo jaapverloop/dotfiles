@@ -4,7 +4,8 @@
 	install-pipsi \
 	install-pythonz \
 	install-sexybashprompt \
-	install-z
+	install-z \
+	install-zgen
 
 help:
 	@echo "Helpers to install additional software"
@@ -15,6 +16,7 @@ help:
 	@echo "+ pythonz		: make install-pythonz"
 	@echo "+ sexybashprompt	: make install-sexybashprompt"
 	@echo "+ z				: make install-z"
+	@echo "+ zgen			: make install-zgen"
 	@echo
 
 install-homebrew:
@@ -36,3 +38,6 @@ install-sexybashprompt:
 
 install-z:
 	git clone https://github.com/rupa/z.git ~/.bin/z
+
+install-zgen:
+	git clone https://github.com/tarjoilija/zgen.git ~/.bin/zgen

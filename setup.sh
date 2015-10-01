@@ -14,6 +14,10 @@ ln -s $SCRIPTPATH/bashrc ~/.bashrc
 ln -s $SCRIPTPATH/bash_profile ~/.bash_profile
 ln -s $SCRIPTPATH/inputrc ~/.inputrc
 
+# setup zsh
+rm ~/.zshrc
+ln -s $SCRIPTPATH/zshrc ~/.zshrc
+
 # setup vim
 rm -rf ~/.vim
 rm ~/.vimrc

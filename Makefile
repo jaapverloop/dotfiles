@@ -1,5 +1,4 @@
 .PHONY: help \
-	install-fzf \
 	install-homebrew \
 	install-nvm \
 	install-pipsi \
@@ -10,7 +9,6 @@
 help:
 	@echo "Helpers to install additional software"
 	@echo
-	@echo "+ fzf			: make install-fzf"
 	@echo "+ homebrew		: make install-homebrew"
 	@echo "+ nvm			: make install-nvm"
 	@echo "+ pipsi			: make install-pipsi"
@@ -18,10 +16,6 @@ help:
 	@echo "+ sexybashprompt	: make install-sexybashprompt"
 	@echo "+ z				: make install-z"
 	@echo
-
-install-fzf:
-	git clone --depth 1 https://github.com/junegunn/fzf.git ~/.bin/fzf
-	~/.bin/fzf/install
 
 install-homebrew:
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

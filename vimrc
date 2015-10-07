@@ -62,6 +62,7 @@ set noerrorbells
 set nojoinspaces
 set nowrap
 set number
+set numberwidth=5
 set ruler
 set scrolloff=5
 set shiftround

@@ -14,10 +14,6 @@ alias ls='ls -G'
 alias ll='ls -l'
 alias tmux='tmux -2'
 
-if [[ -f $HOME/.bin/z/z.sh ]]; then
-    source $HOME/.bin/z/z.sh
-fi
-
 if [[ -f $HOME/.bin/nvm/nvm.sh ]]; then
     source $HOME/.bin/nvm/nvm.sh
 fi
@@ -31,24 +27,4 @@ if [[ -f $HOME/.local/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh ]]; then
     export PROJECT_HOME=$HOME/Development
     export VIRTUALENVWRAPPER_PYTHON=$HOME/.local/venvs/virtualenvwrapper/bin/python
     source $HOME/.local/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh
-fi
-
-if [[ -f $HOME/.bin/sexy-bash-prompt/.bash_prompt ]]; then
-    PROMPT_USER_COLOR="$(tput setaf 197)"
-    PROMPT_PREPOSITION_COLOR="$(tput setaf 255)"
-    PROMPT_DEVICE_COLOR="$(tput setaf 202)"
-    PROMPT_DIR_COLOR="$(tput setaf 35)"
-    PROMPT_GIT_STATUS_COLOR="$(tput setaf 24)"
-    PROMPT_GIT_PROGRESS_COLOR="$(tput setaf 30)"
-    PROMPT_SYMBOL_COLOR="$(tput setaf 255)"
-    PROMPT_SYNCED_SYMBOL=""
-    PROMPT_DIRTY_SYNCED_SYMBOL="*"
-    PROMPT_UNPUSHED_SYMBOL="↑"
-    PROMPT_DIRTY_UNPUSHED_SYMBOL="*↑"
-    PROMPT_UNPULLED_SYMBOL="↓"
-    PROMPT_DIRTY_UNPULLED_SYMBOL="*↓"
-    PROMPT_UNPUSHED_UNPULLED_SYMBOL="*↑↓"
-    PROMPT_DIRTY_UNPUSHED_UNPULLED_SYMBOL="*↑↓"
-    PROMPT_SYMBOL="➜"
-    source $HOME/.bin/sexy-bash-prompt/.bash_prompt
 fi

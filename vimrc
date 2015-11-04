@@ -7,7 +7,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
-Plug 'editorconfig/editorconfig-vim'
 Plug 'gabrielelana/vim-markdown'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/goyo.vim'
@@ -112,7 +111,6 @@ nnoremap <leader>ll :Limelight!!<CR>
 
 " Plugin settings
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:syntastic_php_checkers = ['php']
 let g:lightline = { 'colorscheme': 'gotham' }
 
@@ -126,6 +124,24 @@ set noswapfile
 set nobackup
 set nowritebackup
 set undofile
+
+" Indenting
+autocmd FileType coffee setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd FileType css setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType json setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType less setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
+" Removes trailing spaces
+function! RemoveTrailingSpaces()
+    %s/\s\+$//e
+endfunction
+
+autocmd BufWritePre * :call RemoveTrailingSpaces()
 
 "" Delete a buffer with CtrlP
 "" https://github.com/kien/ctrlp.vim/issues/280

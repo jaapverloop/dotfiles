@@ -9,12 +9,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'gabrielelana/vim-markdown'
 Plug 'itchyny/lightline.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'rking/ag.vim'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
@@ -22,9 +18,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'whatyouhide/vim-gotham'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 call plug#end()
 
@@ -103,12 +97,6 @@ nnoremap <leader>ch :nohlsearch<CR>
 nnoremap <leader>ff :CtrlP<CR>
 nnoremap <leader>fb :CtrlPBuffer<CR>
 nnoremap <leader>fr :CtrlPMRU<CR>
-nnoremap <leader>nt :NERDTreeToggle<CR>
-nnoremap <leader>nf :NERDTreeFocus<CR>
-nnoremap <leader>nm :NERDTreeFind<CR>
-nnoremap <leader>tb :TagbarToggle<CR>
-nnoremap <leader>gy :Goyo<CR>
-nnoremap <leader>ll :Limelight!!<CR>
 
 " Plugin settings
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }

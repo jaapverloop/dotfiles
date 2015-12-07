@@ -14,6 +14,7 @@ if [[ -f $HOME/.bin/zgen/zgen.zsh ]]; then
 fi
 
 # Globals
+export SHELL=`which zsh`
 export VISUAL=vim
 export EDITOR=vim
 export LANG=en_US.UTF-8

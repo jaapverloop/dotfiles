@@ -17,6 +17,7 @@ fi
 export SHELL=`which zsh`
 export VISUAL=vim
 export EDITOR=vim
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=1024

@@ -97,6 +97,7 @@ nnoremap <leader>ch :nohlsearch<CR>
 nnoremap <leader>ff :CtrlP<CR>
 nnoremap <leader>fb :CtrlPBuffer<CR>
 nnoremap <leader>fr :CtrlPMRU<CR>
+nnoremap <leader>fd :CtrlP %:p:h<CR>
 
 " Plugin settings
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }

@@ -16,7 +16,7 @@ help:
 	@echo
 
 install-homebrew:
-	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
 
 install-nvm:
 	git clone https://github.com/creationix/nvm.git ~/.bin/nvm \

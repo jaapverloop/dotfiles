@@ -10,6 +10,7 @@ Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'gabrielelana/vim-markdown'
 Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
+Plug 'morhetz/gruvbox'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/syntastic'
 Plug 'terryma/vim-multiple-cursors'
@@ -18,7 +19,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'whatyouhide/vim-gotham'
 Plug 'Yggdroot/indentLine'
 call plug#end()
 
@@ -27,7 +27,7 @@ let mapleader=","
 let maplocalleader="\\"
 
 " Colorscheme
-colorscheme gotham
+colorscheme gruvbox
 
 " Enable syntax and filetype plugins
 syntax on
@@ -102,7 +102,7 @@ nnoremap <leader>fd :CtrlP %:p:h<CR>
 " Plugin settings
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 let g:syntastic_php_checkers = ['php']
-let g:lightline = { 'colorscheme': 'gotham' }
+let g:lightline = { 'colorscheme': 'gruvbox' }
 
 " File locations
 " Disable swap files

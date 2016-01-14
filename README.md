@@ -28,7 +28,8 @@ git submodule update --init --recursive
 
 #Note
 
-The color preset **gotham** for iTerm is taken from the [gotham-contrib] repository.
+I use the color palette **gruvbox-dark**, taken from the [gruvbox-contrib]
+repository, for iTerm2.
 
 
 ##License
@@ -36,4 +37,4 @@ The color preset **gotham** for iTerm is taken from the [gotham-contrib] reposit
 MIT, see **LICENSE** for more details.
 
 
-[gotham-contrib]: https://github.com/whatyouhide/gotham-contrib
+[gruvbox-contrib]: https://github.com/morhetz/gruvbox-contrib

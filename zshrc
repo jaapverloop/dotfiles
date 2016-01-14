@@ -90,14 +90,14 @@ git_super_status() {
     precmd_update_git_vars
     if [ -n "$__CURRENT_GIT_STATUS" ]; then
         if [ "$GIT_CHANGED" -eq "0" ] && [ "$GIT_CONFLICTS" -eq "0" ] && [ "$GIT_STAGED" -eq "0" ] && [ "$GIT_UNTRACKED" -eq "0" ]; then
-            STATUS="%F{13}($GIT_BRANCH)%f %F{2}●%f "
+            STATUS="%F{5}($GIT_BRANCH)%f %F{6}●%f "
         else
-            STATUS="%F{13}($GIT_BRANCH)%f %F{1}●%f "
+            STATUS="%F{5}($GIT_BRANCH)%f %F{1}●%f "
         fi
         echo "$STATUS"
     fi
 }
 
 precmd() {
-    PROMPT="%B%F{2}➜%b  %B%F{14}%~%b%f $(git_super_status)"
+    PROMPT="%B%F{3}➜%b  %B%F{6}%~%b%f $(git_super_status)"
 }

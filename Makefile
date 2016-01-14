@@ -8,11 +8,11 @@
 help:
 	@echo "Helpers to install additional software"
 	@echo
-	@echo "+ homebrew		: make install-homebrew"
-	@echo "+ nvm			: make install-nvm"
-	@echo "+ pipsi			: make install-pipsi"
-	@echo "+ pythonz		: make install-pythonz"
-	@echo "+ zgen			: make install-zgen"
+	@echo "+ homebrew : make install-homebrew"
+	@echo "+ nvm      : make install-nvm"
+	@echo "+ pipsi    : make install-pipsi"
+	@echo "+ pythonz  : make install-pythonz"
+	@echo "+ zgen     : make install-zgen"
 	@echo
 
 install-homebrew:

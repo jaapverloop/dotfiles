@@ -25,6 +25,8 @@ export SAVEHIST=1024
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PYENV_ROOT="$HOME/.bin/pyenv"
+
 
 # Options
 setopt APPEND_HISTORY
@@ -63,12 +65,13 @@ alias ls='ls -G'
 alias ll='ls -l'
 alias tmux='tmux -2'
 
-if [[ -f $HOME/.bin/nvm/nvm.sh ]]; then
-    source $HOME/.bin/nvm/nvm.sh
+if [[ -d $PYENV_ROOT ]]; then
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
 fi
 
-if [[ -f $HOME/.pythonz/etc/bashrc ]]; then
-    source $HOME/.pythonz/etc/bashrc
+if [[ -f $HOME/.bin/nvm/nvm.sh ]]; then
+    source $HOME/.bin/nvm/nvm.sh
 fi
 
 if [[ -f $HOME/.local/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh ]]; then

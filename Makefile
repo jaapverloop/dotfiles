@@ -2,7 +2,7 @@
 	install-homebrew \
 	install-nvm \
 	install-pipsi \
-	install-pythonz \
+	install-pyenv \
 	install-zgen
 
 help:
@@ -11,7 +11,7 @@ help:
 	@echo "+ homebrew : make install-homebrew"
 	@echo "+ nvm      : make install-nvm"
 	@echo "+ pipsi    : make install-pipsi"
-	@echo "+ pythonz  : make install-pythonz"
+	@echo "+ pyenv    : make install-pyenv"
 	@echo "+ zgen     : make install-zgen"
 	@echo
 
@@ -26,8 +26,8 @@ install-nvm:
 install-pipsi:
 	curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
 
-install-pythonz:
-	curl -kL https://raw.github.com/saghul/pythonz/master/pythonz-install | bash
+install-pyenv:
+	git clone https://github.com/yyuu/pyenv.git ~/.bin/pyenv
 
 install-zgen:
 	git clone https://github.com/tarjoilija/zgen.git ~/.bin/zgen

@@ -30,3 +30,9 @@
     clean = git lfs clean %f
     smudge = git lfs smudge %f
     required = true
+[interactive]
+    diffFilter = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight
+[pager]
+    log = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+    show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+    diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less

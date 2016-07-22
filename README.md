@@ -28,8 +28,7 @@ git submodule update --init --recursive
 
 #Note
 
-I use the color palette **gruvbox-dark**, taken from the [gruvbox-contrib]
-repository, for iTerm2.
+I use the [dracula-theme] for iTerm2.
 
 
 ##License
@@ -37,4 +36,4 @@ repository, for iTerm2.
 MIT, see **LICENSE** for more details.
 
 
-[gruvbox-contrib]: https://github.com/morhetz/gruvbox-contrib
+[dracula-theme]: https://draculatheme.com/

@@ -6,12 +6,12 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dracula/vim'
 Plug 'fatih/vim-go'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'gabrielelana/vim-markdown'
 Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
-Plug 'morhetz/gruvbox'
 Plug 'rking/ag.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/syntastic'
@@ -31,7 +31,7 @@ let mapleader=","
 let maplocalleader="\\"
 
 " Colorscheme
-colorscheme gruvbox
+colorscheme dracula
 
 " Enable syntax and filetype plugins
 syntax on
@@ -106,7 +106,6 @@ nnoremap <leader>fd :CtrlP %:p:h<CR>
 " Plugin settings
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 let g:syntastic_php_checkers = ['php']
-let g:lightline = { 'colorscheme': 'gruvbox' }
 let g:ctrlp_prompt_mappings = {
   \ 'PrtDeleteEnt()': ['<c-@>'],
   \ }

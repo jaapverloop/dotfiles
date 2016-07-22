@@ -6,6 +6,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'fatih/vim-go'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'gabrielelana/vim-markdown'
 Plug 'itchyny/lightline.vim'

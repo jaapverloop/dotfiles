@@ -26,7 +26,7 @@ git submodule update --init --recursive
 ```
 
 
-#Note
+##Note
 
 I use the [dracula-theme] for iTerm2.
 

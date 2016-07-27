@@ -145,6 +145,7 @@ set statusline+=%=                            "align right
 set statusline+=%c\ ┊\ %l/%L\ ┊\ %p%%\        "cursor position
 
 hi StatusLine ctermfg=255 ctermbg=61
+hi StatusLineNC ctermfg=250 ctermbg=60
 
 " Removes trailing spaces
 function! RemoveTrailingSpaces()

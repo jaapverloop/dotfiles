@@ -10,7 +10,6 @@ Plug 'dracula/vim'
 Plug 'fatih/vim-go'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'gabrielelana/vim-markdown'
-Plug 'itchyny/lightline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'rking/ag.vim'
 Plug 'rust-lang/rust.vim'
@@ -132,6 +131,20 @@ autocmd FileType less setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType php setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
+" Statusline
+set statusline=
+set statusline+=\ %n:%f\ ┊\                   "buffernr and path
+set statusline+=%Y\                           "file type
+set statusline+=%{&ff}\                       "file format
+set statusline+=%{strlen(&fenc)?&fenc:&enc}   "encoding
+set statusline+=%{(&bomb?\"+bom\":\"\")}\     "byte order mark
+set statusline+=%r                            "read only
+set statusline+=%m                            "modified
+set statusline+=%=                            "align right
+set statusline+=%c\ ┊\ %l/%L\ ┊\ %p%%\        "cursor position
+
+hi StatusLine ctermfg=255 ctermbg=61
 
 " Removes trailing spaces
 function! RemoveTrailingSpaces()

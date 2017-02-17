@@ -1,36 +1,27 @@
 " Disable compatability with VI
 set nocompatible
 
-" Plugins
-" Managed by vim-plug
+" Plugins managed by vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'dracula/vim'
 Plug 'fatih/vim-go'
-Plug 'FelikZ/ctrlp-py-matcher'
-Plug 'gabrielelana/vim-markdown'
+Plug 'justinmk/vim-dirvish'
 Plug 'mattn/emmet-vim'
-Plug 'rking/ag.vim'
+Plug 'mhinz/vim-grepper'
 Plug 'rust-lang/rust.vim'
-Plug 'scrooloose/syntastic'
 Plug 'StanAngeloff/php.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'Yggdroot/indentLine'
+Plug 'w0rp/ale'
 call plug#end()
 
-" Change leader and localleader
-let mapleader=","
-let maplocalleader="\\"
-
 " Colorscheme
-colorscheme dracula
+colorscheme custom
 
 " Enable syntax and filetype plugins
 syntax on
@@ -41,7 +32,6 @@ filetype indent on
 set autoindent
 set autoread
 set backspace=indent,eol,start
-set colorcolumn=80
 set cursorline
 set encoding=utf-8
 set expandtab
@@ -85,6 +75,9 @@ set wildmode=list:longest
 set splitbelow
 set splitright
 
+" Change leader
+let mapleader=" "
+
 " Easy window navigation
 map <C-j> <C-w>j
 map <C-k> <C-w>k
@@ -94,20 +87,6 @@ map <C-l> <C-w>l
 " Normal regexes for searching
 nnoremap / /\v
 vnoremap / /\v
-
-" Convenient mappings
-nnoremap <leader>ch :nohlsearch<CR>
-nnoremap <leader>ff :CtrlP<CR>
-nnoremap <leader>fb :CtrlPBuffer<CR>
-nnoremap <leader>fr :CtrlPMRU<CR>
-nnoremap <leader>fd :CtrlP %:p:h<CR>
-
-" Plugin settings
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-let g:syntastic_php_checkers = ['php']
-let g:ctrlp_prompt_mappings = {
-  \ 'PrtDeleteEnt()': ['<c-@>'],
-  \ }
 
 " File locations
 " Disable swap files
@@ -144,13 +123,54 @@ set statusline+=%m                            "modified
 set statusline+=%=                            "align right
 set statusline+=%c\ ┊\ %l/%L\ ┊\ %p%%\        "cursor position
 
-hi StatusLine ctermfg=255 ctermbg=61
-hi StatusLineNC ctermfg=250 ctermbg=60
+" Only show the cursorline in current window
+autocmd WinEnter * set cursorline
+autocmd WinLeave * set nocursorline
 
 " Removes trailing spaces
-function! RemoveTrailingSpaces()
+autocmd BufWritePre * :call RemoveTrailingWhitespace()
+
+" Plugin settings: ctrlp.vim
+let g:ctrlp_prompt_mappings={'PrtDeleteEnt()':['<F6>']}
+let g:ctrlp_buffer_func = {
+    \ 'enter': 'HideLastStatus',
+    \ 'exit':  'ShowLastStatus',
+    \ }
+
+if executable('rg')
+    let g:ctrlp_user_command = 'rg %s --files --glob "!.git/*"'
+    let g:ctrlp_use_caching = 0
+endif
+
+" Plugin settings: vim-grepper
+if executable('rg')
+    let g:grepper = {}
+    let g:grepper.tools = ['rg', 'git']
+else
+    let g:grepper = {}
+    let g:grepper.tools = ['grep', 'git']
+endif
+
+" Plugin settings: ale
+let g:ale_sign_column_always = 1
+
+" Convenient mappings
+nnoremap <leader>c :nohlsearch<CR>
+nnoremap <leader>f :CtrlP<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>g :Grepper<CR>
+nnoremap <leader>d :Dirvish<CR>
+nmap gn <plug>(GrepperOperator)
+xmap gv <plug>(GrepperOperator)
+
+func! RemoveTrailingWhitespace()
     %s/\s\+$//e
-endfunction
+endfunc
 
-autocmd BufWritePre * :call RemoveTrailingSpaces()
+func! HideLastStatus()
+    set laststatus=0
+endfunc
 
+func! ShowLastStatus()
+    set laststatus=2
+endfunc

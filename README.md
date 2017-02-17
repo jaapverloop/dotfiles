@@ -1,6 +1,6 @@
 #Dotfiles
 
-My personal dotfiles.
+This repository contains my personal dotfiles.
 
 
 ##Installation
@@ -8,32 +8,29 @@ My personal dotfiles.
 Open a terminal and execute the following commands:
 
 ```sh
-cd ~/code
-git clone --recursive https://github.com/jaapverloop/dotfiles.git
+git clone https://github.com/jaapverloop/dotfiles.git
 cd dotfiles
-./setup.sh
+make setup
 ```
 
 
-##Updating
+##Update
 
 Open a terminal and execute the following commands:
 
 ```sh
-cd ~/code/dotfiles
-git submodule update --init --recursive
-./setup.sh
+cd dotfiles
+git pull
+make setup
 ```
 
 
-##Note
+## Note
 
-I use the [dracula-theme] for iTerm2.
+I use the iTerm2 terminal with a custom color scheme. See the
+``colorscheme.itermcolors`` file.
 
 
 ##License
 
 MIT, see **LICENSE** for more details.
-
-
-[dracula-theme]: https://draculatheme.com/

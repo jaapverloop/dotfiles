@@ -1,18 +1,3 @@
-# Plugin manager
-if [[ -f $HOME/.bin/zgen/zgen.zsh ]]; then
-    source $HOME/.bin/zgen/zgen.zsh
-
-    if ! zgen saved; then
-      echo "Creating a zgen save"
-      zgen load rupa/z
-      zgen load olivierverdier/zsh-git-prompt
-      zgen load zsh-users/zsh-syntax-highlighting
-      zgen load zsh-users/zsh-history-substring-search
-      zgen load zsh-users/zsh-completions
-      zgen save
-    fi
-fi
-
 # Globals
 export SHELL=`which zsh`
 export VISUAL=vim
@@ -22,85 +7,86 @@ export LANG=en_US.UTF-8
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=1024
 export SAVEHIST=1024
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PYENV_ROOT="$HOME/.bin/pyenv"
-
+export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 
 # Options
+setopt ALWAYS_TO_END
 setopt APPEND_HISTORY
 setopt AUTO_CD
+setopt AUTO_LIST
 setopt AUTO_PUSHD
+setopt CHASE_LINKS
 setopt COMPLETE_IN_WORD
 setopt EXTENDED_HISTORY
-setopt HASH_LIST_ALL
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_VERIFY
 setopt INC_APPEND_HISTORY
-setopt NOBEEP
-setopt NOCHECK_JOBS
-setopt NOHIST_BEEP
-setopt NOHUP
-setopt NOLIST_BEEP
-setopt NONOMATCH
+setopt LIST_AMBIGUOUS
+setopt NO_BEEP
+setopt NO_HUP
 setopt NOTIFY
 setopt PUSHD_IGNORE_DUPS
 setopt PUSHD_SILENT
+setopt PROMPT_SUBST
 setopt SHARE_HISTORY
+
+# Auto completion
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' menu select=2
+zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
+zstyle ':completion:*' verbose yes
 
 # Key bindings
 bindkey -v
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+bindkey '^K' kill-whole-line
+bindkey '^L' clear-screen
+bindkey "^N" history-search-forward
+bindkey "^P" history-search-backward
+bindkey "^R" history-incremental-search-backward
+bindkey "^F" forward-word
+bindkey "^B" backward-word
 
 # Aliases
 alias ls='ls -G'
 alias ll='ls -l'
-alias tmux='tmux -2'
 
-if [[ -d $PYENV_ROOT ]]; then
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
-fi
+# Change command in editor
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^X' edit-command-line
 
-if [[ -f $HOME/.bin/nvm/nvm.sh ]]; then
-    source $HOME/.bin/nvm/nvm.sh
-fi
-
-if [[ -f $HOME/.local/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh ]]; then
-    export WORKON_HOME=$HOME/.virtualenvs
-    export PROJECT_HOME=$HOME/Development
-    export VIRTUALENVWRAPPER_PYTHON=$HOME/.local/venvs/virtualenvwrapper/bin/python
-    source $HOME/.local/venvs/virtualenvwrapper/bin/virtualenvwrapper.sh
-fi
-
-termcolors() {
-    for code in $(seq -w 0 255); do
-        for attr in 0 1; do
-            printf "%s-%03s %b●%b\n" "${attr}" "${code}" "\e[${attr};38;05;${code}m" "\e[m";
-        done;
-    done | column -c $((COLUMNS*2))
+# Rerender prompt on vim mode toggle
+function zle-line-init zle-keymap-select {
+    set_prompt
+    zle reset-prompt
 }
 
-git_super_status() {
-    precmd_update_git_vars
-    if [ -n "$__CURRENT_GIT_STATUS" ]; then
-        if [ "$GIT_CHANGED" -eq "0" ] && [ "$GIT_CONFLICTS" -eq "0" ] && [ "$GIT_STAGED" -eq "0" ] && [ "$GIT_UNTRACKED" -eq "0" ]; then
-            STATUS="%F{6}($GIT_BRANCH)%f %F{2}♺%f  "
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+# Setup custom prompt
+function set_prompt {
+    local ins_mode="%B%F{2}➜  %f%b"
+    local cmd_mode="%B%F{0}➜  %f%b"
+    local vim_info="${${KEYMAP/vicmd/${cmd_mode}}/(main|viins)/${ins_mode}}"
+    local cwd_info="%B%F{6}%~%f%b"
+    local git_info="$(git symbolic-ref --short HEAD 2> /dev/null || git rev-parse --short HEAD 2> /dev/null)"
+
+    if [[ -n $git_info ]]; then
+        if [[ -n $(git status --porcelain 2> /dev/null) ]]; then
+            git_info=" %F{3}(${git_info})%f"
         else
-            STATUS="%F{6}($GIT_BRANCH)%f %F{1}♺%f  "
+            git_info=" %F{4}(${git_info})%f"
         fi
-        echo "$STATUS"
     fi
+
+    PROMPT="${vim_info}${cwd_info}${git_info}  "
 }
 
-precmd() {
-    PROMPT="%F{2}⫸  %B%F{4}%~%b%f $(git_super_status)"
-}
+set_prompt

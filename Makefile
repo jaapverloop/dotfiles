@@ -1,33 +1,34 @@
-.PHONY: help \
-	install-homebrew \
-	install-nvm \
-	install-pipsi \
-	install-pyenv \
-	install-zgen
+.PHONY: setup \
+	help \
+	install-homebrew
 
 help:
-	@echo "Helpers to install additional software"
+	@echo "Helpers to setup dotfiles and install additional software"
 	@echo
+	@echo "+ setup    : setup dotfiles"
 	@echo "+ homebrew : make install-homebrew"
-	@echo "+ nvm      : make install-nvm"
-	@echo "+ pipsi    : make install-pipsi"
-	@echo "+ pyenv    : make install-pyenv"
-	@echo "+ zgen     : make install-zgen"
 	@echo
+
+setup:
+	@# setup zsh
+	@rm -f ${HOME}/.zshrc
+	@ln -s ${CURDIR}/zshrc ${HOME}/.zshrc
+
+	@# setup vim
+	@rm -rf ${HOME}/.vim
+	@rm -f ${HOME}/.vimrc
+	@ln -s ${CURDIR}/vim ${HOME}/.vim
+	@ln -s ${CURDIR}/vimrc ${HOME}/.vimrc
+
+	@# setup git
+	@rm -f ${HOME}/.gitconfig
+	@rm -f ${HOME}/.gitignore
+	@ln -s ${CURDIR}/gitconfig ${HOME}/.gitconfig
+	@ln -s ${CURDIR}/gitignore ${HOME}/.gitignore
+
+	@# setup tmux
+	@rm -f ${HOME}/.tmux.conf
+	@ln -s ${CURDIR}/tmux.conf ${HOME}/.tmux.conf
 
 install-homebrew:
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
-
-install-nvm:
-	git clone https://github.com/creationix/nvm.git ~/.bin/nvm \
-	&& cd ~/.bin/nvm \
-	&& git checkout `git describe --abbrev=0 --tags`
-
-install-pipsi:
-	curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
-
-install-pyenv:
-	git clone https://github.com/yyuu/pyenv.git ~/.bin/pyenv
-
-install-zgen:
-	git clone https://github.com/tarjoilija/zgen.git ~/.bin/zgen

@@ -85,6 +85,12 @@ map <C-k> <C-w>k
 map <C-h> <C-w>h
 map <C-l> <C-w>l
 
+" Resize splits with arrow keys
+nnoremap <Up> :resize +1<CR>
+nnoremap <Down> :resize -1<CR>
+nnoremap <Left> :vertical resize +1<CR>
+nnoremap <Right> :vertical resize -1<CR>
+
 " Normal regexes for searching
 nnoremap / /\v
 vnoremap / /\v

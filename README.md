@@ -27,10 +27,13 @@ make setup
 
 ## Note
 
-I use the iTerm2 terminal with a custom color scheme. See the
-``colorscheme.itermcolors`` file.
+I use the iTerm2 terminal with the [One Dark] color scheme.
 
 
 ##License
 
 MIT, see **LICENSE** for more details.
+
+
+[One Dark]: https://github.com/joshdick/onedark.vim/blob/master/One%20Dark.itermcolors
+

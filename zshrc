@@ -72,21 +72,21 @@ zle -N zle-keymap-select
 
 # Setup custom prompt
 function set_prompt {
-    local ins_mode="%B%F{2}➜  %f%b"
-    local cmd_mode="%B%F{0}➜  %f%b"
+    local ins_mode="%F{2}➜   %f"
+    local cmd_mode="%F{8}➜   %f"
     local vim_info="${${KEYMAP/vicmd/${cmd_mode}}/(main|viins)/${ins_mode}}"
     local cwd_info="%B%F{6}%~%f%b"
     local git_info="$(git symbolic-ref --short HEAD 2> /dev/null || git rev-parse --short HEAD 2> /dev/null)"
 
     if [[ -n $git_info ]]; then
         if [[ -n $(git status --porcelain 2> /dev/null) ]]; then
-            git_info=" %F{3}(${git_info})%f"
+            git_info=" %B%F{1}(${git_info})%f%b"
         else
-            git_info=" %F{4}(${git_info})%f"
+            git_info=" %B%F{8}(${git_info})%f%b"
         fi
     fi
 
-    PROMPT="${vim_info}${cwd_info}${git_info}  "
+    PROMPT="${vim_info}${cwd_info}${git_info} "
 }
 
 set_prompt

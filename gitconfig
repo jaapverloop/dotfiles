@@ -8,13 +8,25 @@
     autocrlf = false
     safecrlf = false
     excludesfile = ~/.gitignore
-    pager = less
+    pager = diff-so-fancy | less --tabs=4 -RFX
 [color]
     ui = true
 [diff]
     tool = vimdiff
 [difftool]
     prompt = false
+[color "diff"]
+    meta = yellow bold
+    commit = green bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "diff-highlight"]
+    oldNormal = red bold
+    oldHighlight = "red bold 52"
+    newNormal = "green bold"
+    newHighlight = "green bold 22"
 [merge]
     tool = vimdiff
     conflictstyle = diff3
@@ -30,11 +42,5 @@
     clean = git lfs clean %f
     smudge = git lfs smudge %f
     required = true
-[interactive]
-    diffFilter = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight
-[pager]
-    log = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
-    show = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
-    diff = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [url "git@github.com:"]
     insteadOf = gh:

@@ -5,11 +5,9 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'fatih/vim-go'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-grepper'
-Plug 'rust-lang/rust.vim'
-Plug 'StanAngeloff/php.vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'

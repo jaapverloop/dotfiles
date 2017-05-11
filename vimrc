@@ -15,10 +15,14 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'Yggdroot/indentLine'
 Plug 'w0rp/ale'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 " Colorscheme
-colorscheme custom
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
+colorscheme onedark
 
 " Enable syntax and filetype plugins
 syntax on
@@ -170,3 +174,9 @@ endfunc
 func! ShowLastStatus()
     set laststatus=2
 endfunc
+
+" Colorscheme adjustments
+hi StatusLine guifg=#282c34 guibg=#abb2bf gui=bold cterm=bold
+hi StatusLineNC guifg=#282c34 guibg=#5c6370 gui=none cterm=none
+hi VertSplit guifg=#282c34 guibg=#5c6370 gui=none cterm=none
+

@@ -6,7 +6,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go'
-Plug 'justinmk/vim-dirvish'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-grepper'
 Plug 'rust-lang/rust.vim'
@@ -159,7 +158,6 @@ nnoremap <leader>c :nohlsearch<CR>
 nnoremap <leader>f :CtrlP<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>g :Grepper<CR>
-nnoremap <leader>d :Dirvish<CR>
 nmap gn <plug>(GrepperOperator)
 xmap gv <plug>(GrepperOperator)
 

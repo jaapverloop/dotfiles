@@ -11,6 +11,7 @@ Thumbs.db
 # Editor files
 *.sublime-project
 *.sublime-workspace
+.vscode
 
 junk/
 vim/.netrwhist

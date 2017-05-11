@@ -1,9 +1,9 @@
-#Dotfiles
+# Dotfiles
 
 This repository contains my personal dotfiles.
 
 
-##Installation
+## Installation
 
 Open a terminal and execute the following commands:
 
@@ -14,7 +14,7 @@ make setup
 ```
 
 
-##Update
+## Update
 
 Open a terminal and execute the following commands:
 
@@ -30,7 +30,7 @@ make setup
 I use the iTerm2 terminal with the [One Dark] color scheme.
 
 
-##License
+## License
 
 MIT, see **LICENSE** for more details.
 

@@ -66,7 +66,7 @@ set virtualedit=onemore
 set visualbell
 set wildignore=*.o,*~,*.pyc
 set wildmenu
-set wildmode=list:longest
+set wildmode=full
 
 " Split windows below and right
 set splitbelow

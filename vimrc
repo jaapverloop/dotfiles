@@ -5,6 +5,8 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'haya14busa/incsearch.vim'
+Plug 'maralla/completor.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-grepper'
 Plug 'sheerun/vim-polyglot'
@@ -161,6 +163,10 @@ endif
 " Plugin settings: ale
 let g:ale_sign_column_always = 1
 let g:ale_linters = {'php': ['php']}
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 
 " Convenient mappings
 nnoremap <leader>c :nohlsearch<CR>

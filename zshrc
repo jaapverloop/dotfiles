@@ -70,6 +70,18 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
+# https://github.com/zsh-users/zsh-autosuggestions
+ZSH_AUTOSUGGESTIONS_PATH=$HOME/.bin/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ -a $ZSH_AUTOSUGGESTIONS_PATH ]]; then
+    source $ZSH_AUTOSUGGESTIONS_PATH
+fi
+
+# https://github.com/zsh-users/zsh-syntax-highlighting
+ZSH_SYNTAX_HIGHLIGHTING_PATH=$HOME/.bin/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ -a $ZSH_SYNTAX_HIGHLIGHTING_PATH ]]; then
+    source $ZSH_SYNTAX_HIGHLIGHTING_PATH
+fi
+
 # Setup custom prompt
 function set_prompt {
     local ins_mode="%F{2}➜   %f"

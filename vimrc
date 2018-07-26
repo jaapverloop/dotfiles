@@ -5,7 +5,6 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'haya14busa/incsearch.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'maralla/completor.vim'
 Plug 'mattn/emmet-vim'

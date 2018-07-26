@@ -7,7 +7,7 @@ export LANG=en_US.UTF-8
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=1024
 export SAVEHIST=1024
-export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$HOME/.cargo/bin"
 
 # Options
 setopt ALWAYS_TO_END

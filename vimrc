@@ -6,6 +6,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'haya14busa/incsearch.vim'
+Plug 'justinmk/vim-sneak'
 Plug 'maralla/completor.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-grepper'
@@ -17,14 +18,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'Yggdroot/indentLine'
 Plug 'w0rp/ale'
-Plug 'joshdick/onedark.vim'
 call plug#end()
-
-" Colorscheme
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-set termguicolors
-colorscheme onedark
 
 " Enable syntax and filetype plugins
 syntax on
@@ -189,7 +183,10 @@ func! ShowLastStatus()
 endfunc
 
 " Colorscheme adjustments
-hi StatusLine guifg=#282c34 guibg=#abb2bf gui=bold cterm=bold
-hi StatusLineNC guifg=#282c34 guibg=#5c6370 gui=none cterm=none
-hi VertSplit guifg=#282c34 guibg=#5c6370 gui=none cterm=none
+hi CursorLine ctermfg=none ctermbg=8 cterm=none
+hi CursorLineNr ctermfg=0 ctermbg=8 cterm=bold
+hi LineNr ctermfg=8 ctermbg=none cterm=none
+hi StatusLine ctermfg=0 ctermbg=7 cterm=bold
+hi StatusLineNC ctermfg=0 ctermbg=15 cterm=bold
+hi VertSplit ctermfg=15 ctermbg=0 cterm=none
 

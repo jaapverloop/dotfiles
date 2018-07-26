@@ -15,3 +15,5 @@ Thumbs.db
 
 junk/
 vim/.netrwhist
+vim/autoload/plug.vim.old
+

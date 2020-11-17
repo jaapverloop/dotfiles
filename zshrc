@@ -85,8 +85,8 @@ fi
 
 # Setup custom prompt
 function set_prompt {
-    local ins_mode="%F{2}➜   %f"
-    local cmd_mode="%F{8}➜   %f"
+    local ins_mode="%F{2}➜  %f"
+    local cmd_mode="%F{8}➜  %f"
     local vim_info="${${KEYMAP/vicmd/${cmd_mode}}/(main|viins)/${ins_mode}}"
     local cwd_info="%B%F{6}%~%f%b"
     local git_info="$(git symbolic-ref --short HEAD 2> /dev/null || git rev-parse --short HEAD 2> /dev/null)"

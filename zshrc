@@ -8,7 +8,7 @@ export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=1024
 export SAVEHIST=1024
 export GOPATH="$HOME/Code/go"
-export PATH="$HOME/.bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$HOME/.cargo/bin"
+export PATH="$HOME/.bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 
 # Options
 setopt ALWAYS_TO_END

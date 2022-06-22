@@ -31,4 +31,4 @@ setup:
 	@ln -s ${CURDIR}/tmux.conf ${HOME}/.tmux.conf
 
 install-homebrew:
-	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install | ruby
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

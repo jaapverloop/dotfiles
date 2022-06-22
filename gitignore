@@ -17,3 +17,5 @@ junk/
 vim/.netrwhist
 vim/autoload/plug.vim.old
 
+__pycache__
+

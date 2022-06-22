@@ -1,6 +1,7 @@
 [user]
     name = Jaap Verloop
     email = j.verloop@gmail.com
+    useConfigOnly = true
 [github]
     user = jaapverloop
 [core]

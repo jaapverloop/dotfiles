@@ -24,9 +24,9 @@
     whitespace = red reverse
 [color "diff-highlight"]
     oldNormal = red bold
-    oldHighlight = "red bold 52"
-    newNormal = "green bold"
-    newHighlight = "green bold 22"
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
 [merge]
     tool = vimdiff
     conflictstyle = diff3
@@ -45,3 +45,7 @@
     required = true
 [url "git@github.com:"]
     insteadOf = gh:
+[status]
+    short = true
+    branch = true
+    showUntrackedFiles = all

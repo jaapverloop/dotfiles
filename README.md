@@ -35,5 +35,5 @@ I use the iTerm2 terminal with the [One Dark] color scheme.
 MIT, see **LICENSE** for more details.
 
 
-[One Dark]: https://github.com/joshdick/onedark.vim/blob/master/One%20Dark.itermcolors
+[One Dark]: https://github.com/joshdick/onedark.vim/blob/main/term/One%20Dark.itermcolors
 

@@ -30,6 +30,7 @@ brew install \
 # install apps with brew
 brew install --cask \
     alfred \
+    another-redis-desktop-manager \
     boostnote \
     dbeaver-community \
     docker \

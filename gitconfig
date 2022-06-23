@@ -2,6 +2,7 @@
     name = Jaap Verloop
     email = j.verloop@gmail.com
     useConfigOnly = true
+    signingkey = E00095F9
 [github]
     user = jaapverloop
 [core]
@@ -51,3 +52,7 @@
     short = true
     branch = true
     showUntrackedFiles = all
+[gpg]
+    program = /opt/homebrew/bin/gpg
+[commit]
+    gpgsign = true

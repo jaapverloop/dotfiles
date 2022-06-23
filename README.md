@@ -10,7 +10,10 @@ Open a terminal and execute the following commands:
 ```sh
 git clone https://github.com/jaapverloop/dotfiles.git
 cd dotfiles
-make setup
+xcode-select --install
+sudo softwareupdate --install-rosetta
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash setup.sh
 ```
 
 
@@ -21,7 +24,7 @@ Open a terminal and execute the following commands:
 ```sh
 cd dotfiles
 git pull
-make setup
+/bin/bash setup.sh
 ```
 
 

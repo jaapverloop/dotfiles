@@ -17,9 +17,10 @@
 [difftool]
     prompt = false
 [color "diff"]
-    meta = yellow bold
-    commit = green bold
+    meta = 11
     frag = magenta bold
+    func = 146 bold
+    commit = yellow bold
     old = red bold
     new = green bold
     whitespace = red reverse

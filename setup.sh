@@ -6,6 +6,10 @@ set -o nounset
 START=$(date +%s)
 ROOTDIR="$(cd "$(dirname "${0}")"; echo $(pwd))"
 
+# add other repositories to brew
+brew tap shivammathur/php
+brew tap shivammathur/extensions
+
 # install packages with brew
 brew install \
     zsh \
@@ -19,9 +23,13 @@ brew install \
     mailhog \
     node \
     node-sass \
+    shivammathur/php/php@8.2 \
+    shivammathur/php/php@8.1 \
+    shivammathur/php/php@7.4 \
+    shivammathur/extensions/xdebug@8.2 \
+    shivammathur/extensions/xdebug@8.1 \
+    shivammathur/extensions/xdebug@7.4 \
     python@3.9 \
-    php@7.4 \
-    php@8.0 \
     composer \
     gpg2 \
     gnupg \

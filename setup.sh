@@ -21,6 +21,7 @@ brew install \
     mariadb \
     redis \
     mailhog \
+    ngrok \
     node \
     node-sass \
     shivammathur/php/php@8.2 \

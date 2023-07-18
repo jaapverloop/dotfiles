@@ -34,7 +34,8 @@ brew install \
     composer \
     gpg2 \
     gnupg \
-    pinentry-mac
+    pinentry-mac \
+    rar
 
 # install apps with brew
 brew install --cask \

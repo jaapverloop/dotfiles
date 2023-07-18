@@ -16,7 +16,6 @@ sudo softwareupdate --install-rosetta
 /bin/bash setup.sh
 ```
 
-
 ## Update
 
 Open a terminal and execute the following commands:
@@ -27,7 +26,6 @@ git pull
 /bin/bash setup.sh
 ```
 
-
 ## Notes
 
 * I use the iTerm2 terminal with the [One Dark] color scheme.
@@ -37,7 +35,6 @@ git pull
 ## License
 
 MIT, see **LICENSE** for more details.
-
 
 [One Dark]: https://github.com/joshdick/onedark.vim/blob/main/term/One%20Dark.itermcolors
 [GPG Signing]: https://gist.github.com/troyfontaine/18c9146295168ee9ca2b30c00bd1b41e

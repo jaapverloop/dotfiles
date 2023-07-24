@@ -51,6 +51,7 @@ brew install --cask \
     iterm2 \
     keeweb \
     microsoft-teams \
+    phpstorm \
     postman \
     sequel-ace \
     sequel-pro \

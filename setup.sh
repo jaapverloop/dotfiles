@@ -44,12 +44,15 @@ brew install --cask \
     dbeaver-community \
     docker \
     dropbox \
+    figma \
+    firefox \
     flux \
     fork \
     google-chrome \
     imageoptim \
     iterm2 \
     keeweb \
+    microsoft-outlook \
     microsoft-teams \
     phpstorm \
     postman \

@@ -39,9 +39,8 @@ brew install \
 
 # install apps with brew
 brew install --cask \
-    another-redis-desktop-manager \
     boostnote \
-    dbeaver-community \
+    datagrip \
     docker \
     dropbox \
     figma \

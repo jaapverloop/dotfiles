@@ -183,8 +183,9 @@ endfunc
 
 " Colorscheme adjustments
 hi CursorLine ctermfg=none ctermbg=8 cterm=none
-hi CursorLineNr ctermfg=0 ctermbg=8 cterm=bold
+hi CursorLineNr ctermfg=none ctermbg=8 cterm=bold
 hi LineNr ctermfg=8 ctermbg=none cterm=none
+hi SignColumn ctermfg=none ctermbg=none cterm=none
 hi StatusLine ctermfg=0 ctermbg=7 cterm=bold
 hi StatusLineNC ctermfg=0 ctermbg=15 cterm=bold
 hi VertSplit ctermfg=15 ctermbg=0 cterm=none

@@ -104,15 +104,15 @@ function set_prompt {
 }
 
 function link_php74 {
-    brew link php@7.4 --force --overwrite
+    brew unlink php && brew link php@7.4 --force --overwrite
 }
 
 function link_php81 {
-    brew link php@8.1 --force --overwrite
+    brew unlink php && brew link php@8.1 --force --overwrite
 }
 
 function link_php82 {
-    brew link php@8.2 --force --overwrite
+    brew unlink php && brew link php@8.2 --force --overwrite
 }
 
 set_prompt

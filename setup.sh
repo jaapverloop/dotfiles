@@ -58,6 +58,7 @@ brew install --cask \
     sequel-ace \
     sequel-pro \
     raycast \
+    shottr \
     signal \
     slack \
     spotify \

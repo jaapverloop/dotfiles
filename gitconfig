@@ -10,26 +10,14 @@
     autocrlf = false
     safecrlf = false
     excludesfile = ~/.gitignore
-    pager = diff-so-fancy | less --tabs=4 -RFX
+    pager = delta
 [color]
     ui = true
 [diff]
     tool = vimdiff
+    colorMoved = default
 [difftool]
     prompt = false
-[color "diff"]
-    meta = 11
-    frag = magenta bold
-    func = 146 bold
-    commit = yellow bold
-    old = red bold
-    new = green bold
-    whitespace = red reverse
-[color "diff-highlight"]
-    oldNormal = red bold
-    oldHighlight = red bold 52
-    newNormal = green bold
-    newHighlight = green bold 22
 [merge]
     tool = vimdiff
     conflictstyle = diff3
@@ -57,6 +45,10 @@
 [commit]
     gpgsign = true
 [interactive]
-    diffFilter = diff-so-fancy --patch
+    diffFilter = delta --color-only --features=interactive
 [init]
-	defaultBranch = main
+    defaultBranch = main
+[delta]
+    line-numbers = true
+    navigate = true
+    light = false

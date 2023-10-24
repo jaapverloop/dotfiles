@@ -15,6 +15,7 @@ brew install \
     zsh \
     tmux \
     git \
+    git-delta \
     vim \
     curl \
     sqlite \
@@ -115,7 +116,6 @@ pushd ${HOME}
         pushd repos
             git clone https://github.com/zsh-users/zsh-autosuggestions.git || true
             git clone https://github.com/zsh-users/zsh-syntax-highlighting.git || true
-            git clone https://github.com/so-fancy/diff-so-fancy.git || true
         popd
 
         ln -sf ${HOME}/.venv/bin/fab
@@ -124,7 +124,6 @@ pushd ${HOME}
         ln -sf ${HOME}/.venv/bin/sphinx-quickstart
         ln -sf ${HOME}/.composer/vendor/bin/psysh
         ln -sf ${HOME}/.composer/vendor/bin/php-cs-fixer
-        ln -sf ${HOME}/.bin/repos/diff-so-fancy/diff-so-fancy diff-so-fancy
     popd
 popd
 

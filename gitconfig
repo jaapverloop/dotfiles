@@ -47,6 +47,23 @@
 [init]
     defaultBranch = main
 [delta]
+    # https://github.com/catppuccin/delta/blob/main/themes/mocha.gitconfig
+    dark = true
     line-numbers = true
-    navigate = true
-    light = false
+    blame-palette = "#1e1e2e #181825 #11111b #313244 #45475a"
+    commit-decoration-style = "box ul"
+    file-decoration-style = "#cdd6f4"
+    file-style = "#cdd6f4"
+    hunk-header-decoration-style = "box ul"
+    hunk-header-file-style = "bold"
+    hunk-header-line-number-style = "bold #a6adc8"
+    hunk-header-style = "file line-number syntax"
+    line-numbers-left-style = "#6c7086"
+    line-numbers-minus-style = "bold #f38ba8"
+    line-numbers-plus-style = "bold #a6e3a1"
+    line-numbers-right-style = "#6c7086"
+    line-numbers-zero-style = "#6c7086"
+    minus-emph-style = "bold syntax #53394c"
+    minus-style = "syntax #35293b"
+    plus-emph-style = "bold syntax #40504b"
+    plus-style = "syntax #2c333a"

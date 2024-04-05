@@ -1,7 +1,7 @@
 # Globals
 export SHELL=`which zsh`
-export VISUAL=vim
-export EDITOR=vim
+export VISUAL=nvim
+export EDITOR=nvim
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export HISTFILE="$HOME/.zsh_history"
@@ -61,6 +61,7 @@ bindkey '^X' edit-command-line
 # Aliases
 alias ls='ls -G'
 alias ll='ls -l'
+alias vim='nvim'
 
 # Plugin: https://github.com/zsh-users/zsh-autosuggestions
 ZSH_AUTOSUGGESTIONS_PATH=$HOME/.bin/repos/zsh-autosuggestions/zsh-autosuggestions.zsh

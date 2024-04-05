@@ -16,7 +16,7 @@ brew install \
     tmux \
     git \
     git-delta \
-    vim \
+    neovim \
     curl \
     sqlite \
     mariadb \
@@ -74,11 +74,10 @@ pushd ${HOME}
     rm -f .zshrc
     ln -s ${ROOTDIR}/zshrc .zshrc
 
-    # setup vim
-    rm -rf .vim
-    rm -f .vimrc
-    ln -s ${ROOTDIR}/vim .vim
-    ln -s ${ROOTDIR}/vimrc .vimrc
+    # setup nvim
+    rm -rf .config/nvim
+    mkdir -p .config
+    ln -s ${ROOTDIR}/nvim .config/nvim
 
     # setup git
     rm -f .gitconfig

@@ -14,12 +14,10 @@
 [color]
     ui = true
 [diff]
-    tool = vimdiff
     colorMoved = default
 [difftool]
     prompt = false
 [merge]
-    tool = vimdiff
     conflictstyle = diff3
 [mergetool]
     prompt = false
@@ -41,11 +39,11 @@
     branch = true
     showUntrackedFiles = all
 [gpg]
-    program = /opt/homebrew/bin/gpg
+    program = gpg
 [commit]
     gpgsign = true
 [interactive]
-    diffFilter = delta --color-only --features=interactive
+    diffFilter = delta --color-only
 [init]
     defaultBranch = main
 [delta]

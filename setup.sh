@@ -57,7 +57,6 @@ brew install --cask \
     phpstorm \
     postman \
     sequel-ace \
-    sequel-pro \
     raycast \
     signal \
     slack \

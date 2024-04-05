@@ -21,7 +21,6 @@ brew install \
     sqlite \
     mariadb \
     redis \
-    mailhog \
     ngrok \
     node \
     node-sass \

@@ -41,6 +41,10 @@ zstyle ':completion:*' menu select=2
 zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 zstyle ':completion:*' verbose yes
 
+# Change command in editor
+autoload -U edit-command-line
+zle -N edit-command-line
+
 # Key bindings
 bindkey -v
 bindkey '^A' beginning-of-line
@@ -52,24 +56,11 @@ bindkey "^P" history-search-backward
 bindkey "^R" history-incremental-search-backward
 bindkey "^F" forward-word
 bindkey "^B" backward-word
+bindkey '^X' edit-command-line
 
 # Aliases
 alias ls='ls -G'
 alias ll='ls -l'
-
-# Change command in editor
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey '^X' edit-command-line
-
-# Rerender prompt on vim mode toggle
-function zle-line-init zle-keymap-select {
-    set_prompt
-    zle reset-prompt
-}
-
-zle -N zle-line-init
-zle -N zle-keymap-select
 
 # Plugin: https://github.com/zsh-users/zsh-autosuggestions
 ZSH_AUTOSUGGESTIONS_PATH=$HOME/.bin/repos/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -83,23 +74,7 @@ if [[ -a $ZSH_SYNTAX_HIGHLIGHTING_PATH ]]; then
     source $ZSH_SYNTAX_HIGHLIGHTING_PATH
 fi
 
-# Setup custom prompt
-function set_prompt {
-    local ins_mode="%F{2}➜  %f"
-    local cmd_mode="%F{8}➜  %f"
-    local vim_info="${${KEYMAP/vicmd/${cmd_mode}}/(main|viins)/${ins_mode}}"
-    local cwd_info="%B%F{6}%~%f%b"
-    local git_info="$(git symbolic-ref --short HEAD 2> /dev/null || git rev-parse --short HEAD 2> /dev/null)"
-
-    if [[ -n $git_info ]]; then
-        if [[ -n $(git status --porcelain 2> /dev/null) ]]; then
-            git_info=" %B%F{1}(${git_info})%f%b"
-        else
-            git_info=" %B%F{8}(${git_info})%f%b"
-        fi
-    fi
-
-    PROMPT="${vim_info}${cwd_info}${git_info} "
-}
-
-set_prompt
+# Prompt
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh --config $HOME/.prompt.omp.json)"
+fi

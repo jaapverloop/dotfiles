@@ -1,0 +1,52 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "arrow": "#8C8FA1",
+    "branch": "#6C6F85",
+    "colon": "#4C4F69",
+    "git": "#ACB0BE",
+    "path": "#EA76CB",
+    "preposition": "#4C4F69",
+    "username": "#7287FD"
+  },
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "p:username",
+          "style": "plain",
+          "template": "{{ .UserName }} ",
+          "type": "session"
+        },
+        {
+          "foreground": "p:path",
+          "properties": {
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "<p:preposition>in</> {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "properties": {
+            "branch_icon": "",
+            "fetch_status": false
+          },
+          "style": "plain",
+          "template": "<p:preposition>on</> <p:git>git</><p:colon>:</><p:branch>{{ .HEAD }}</> ",
+          "type": "git"
+        },
+        {
+          "style": "plain",
+          "foreground": "p:arrow",
+          "template": "\uf105",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}

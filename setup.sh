@@ -25,6 +25,7 @@ brew install \
     ngrok \
     node \
     node-sass \
+    oh-my-posh \
     shivammathur/php/php@8.2 \
     shivammathur/php/php@8.1 \
     shivammathur/php/php@7.4 \
@@ -90,6 +91,9 @@ pushd ${HOME}
     # setup tmux
     rm -f .tmux.conf
     ln -s ${ROOTDIR}/tmux.conf .tmux.conf
+
+    # custom oh-my-posh theme
+    ln -s ${ROOTDIR}/prompt.omp.json .prompt.omp.json
 
     # setup other commandline tools in .bin folder
     python3 -m venv .venv

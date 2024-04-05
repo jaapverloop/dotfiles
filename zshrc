@@ -102,16 +102,4 @@ function set_prompt {
     PROMPT="${vim_info}${cwd_info}${git_info} "
 }
 
-function link_php74 {
-    brew unlink php && brew link php@7.4 --force --overwrite
-}
-
-function link_php81 {
-    brew unlink php && brew link php@8.1 --force --overwrite
-}
-
-function link_php82 {
-    brew unlink php && brew link php@8.2 --force --overwrite
-}
-
 set_prompt

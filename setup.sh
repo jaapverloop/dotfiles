@@ -34,6 +34,7 @@ brew install \
     shivammathur/extensions/xdebug@8.2 \
     shivammathur/extensions/xdebug@8.1 \
     shivammathur/extensions/xdebug@7.4 \
+    tokei \
     python@3.9 \
     composer \
     gpg2 \

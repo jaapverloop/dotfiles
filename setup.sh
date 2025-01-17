@@ -53,7 +53,6 @@ brew install --cask \
     keeweb \
     microsoft-outlook \
     microsoft-teams \
-    phpstorm \
     postman \
     sequel-ace \
     raycast \

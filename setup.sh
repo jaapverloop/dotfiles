@@ -21,6 +21,7 @@ brew install \
     sqlite \
     mariadb \
     redis \
+    jesseduffield/lazydocker/lazydocker \
     jesseduffield/lazygit/lazygit \
     ngrok \
     node \

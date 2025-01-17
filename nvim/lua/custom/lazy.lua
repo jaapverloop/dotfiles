@@ -13,3 +13,6 @@ end
 
 -- add lazy to the runtimepath
 vim.opt.rtp:prepend(lazypath)
+
+-- load plugins
+require("lazy").setup("custom/plugins")

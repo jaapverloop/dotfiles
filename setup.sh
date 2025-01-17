@@ -12,35 +12,35 @@ brew tap shivammathur/extensions
 
 # install packages with brew
 brew install \
-    zsh \
-    tmux \
+    composer \
+    curl \
     git \
     git-delta \
-    neovim \
-    curl \
+    gnupg \
+    gpg2 \
     htop \
-    sqlite \
-    mariadb \
-    redis \
     jesseduffield/lazydocker/lazydocker \
     jesseduffield/lazygit/lazygit \
+    mariadb \
+    neovim \
     ngrok \
     node \
     node-sass \
     oh-my-posh \
-    shivammathur/php/php@8.2 \
-    shivammathur/php/php@8.1 \
-    shivammathur/php/php@7.4 \
-    shivammathur/extensions/xdebug@8.2 \
-    shivammathur/extensions/xdebug@8.1 \
-    shivammathur/extensions/xdebug@7.4 \
-    tokei \
-    python@3.9 \
-    composer \
-    gpg2 \
-    gnupg \
     pinentry-mac \
-    rar
+    python@3.9 \
+    rar \
+    redis \
+    shivammathur/extensions/xdebug@7.4 \
+    shivammathur/extensions/xdebug@8.1 \
+    shivammathur/extensions/xdebug@8.2 \
+    shivammathur/php/php@7.4 \
+    shivammathur/php/php@8.1 \
+    shivammathur/php/php@8.2 \
+    sqlite \
+    tmux \
+    tokei \
+    zsh
 
 # install apps with brew
 brew install --cask \
@@ -59,8 +59,8 @@ brew install --cask \
     microsoft-outlook \
     microsoft-teams \
     postman \
-    sequel-ace \
     raycast \
+    sequel-ace \
     signal \
     slack \
     spotify \

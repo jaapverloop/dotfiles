@@ -18,6 +18,7 @@ brew install \
     git-delta \
     neovim \
     curl \
+    htop \
     sqlite \
     mariadb \
     redis \

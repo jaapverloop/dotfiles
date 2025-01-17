@@ -41,6 +41,7 @@ brew install \
 # install apps with brew
 brew install --cask \
     boostnote \
+    bruno \
     docker \
     dropbox \
     figma \

@@ -62,6 +62,7 @@ bindkey '^X' edit-command-line
 alias ls='ls -G'
 alias ll='ls -l'
 alias vim='nvim'
+alias lzd='lazydocker'
 alias lzg='lazygit'
 
 # Plugin: https://github.com/zsh-users/zsh-autosuggestions

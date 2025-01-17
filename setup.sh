@@ -41,7 +41,6 @@ brew install \
 # install apps with brew
 brew install --cask \
     boostnote \
-    datagrip \
     docker \
     dropbox \
     figma \

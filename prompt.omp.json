@@ -11,42 +11,50 @@
   },
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "foreground": "p:username",
-          "style": "plain",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "{{ .UserName }} ",
-          "type": "session"
+          "foreground": "p:username",
+          "type": "session",
+          "style": "plain"
         },
         {
-          "foreground": "p:path",
           "properties": {
+            "cache_duration": "none",
             "style": "full"
           },
-          "style": "plain",
           "template": "<p:preposition>in</> {{ .Path }} ",
-          "type": "path"
+          "foreground": "p:path",
+          "type": "path",
+          "style": "plain"
         },
         {
           "properties": {
             "branch_icon": "",
+            "cache_duration": "none",
             "fetch_status": false
           },
-          "style": "plain",
           "template": "<p:preposition>on</> <p:git>git</><p:colon>:</><p:branch>{{ .HEAD }}</> ",
-          "type": "git"
+          "type": "git",
+          "style": "plain"
         },
         {
-          "style": "plain",
-          "foreground": "p:arrow",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "\uf105",
-          "type": "text"
+          "foreground": "p:arrow",
+          "type": "text",
+          "style": "plain"
         }
-      ],
-      "type": "prompt"
+      ]
     }
   ],
-  "final_space": true,
-  "version": 2
+  "version": 3,
+  "final_space": true
 }

@@ -44,6 +44,7 @@ brew install \
 
 # install apps with brew
 brew install --cask \
+    alacritty \
     boostnote \
     bruno \
     docker \
@@ -87,6 +88,11 @@ pushd ${HOME}
     rm -f .gitignore
     ln -s ${ROOTDIR}/gitconfig .gitconfig
     ln -s ${ROOTDIR}/gitignore .gitignore
+
+    # setup alacritty
+    rm -rf .config/alacritty
+    mkdir -p .config
+    ln -s ${ROOTDIR}/alacritty .config/alacritty
 
     # setup tmux
     rm -f .tmux.conf

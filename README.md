@@ -12,6 +12,7 @@ cd dotfiles
 xcode-select --install
 sudo softwareupdate --install-rosetta
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew analytics off
 /bin/bash setup.sh
 ```
 

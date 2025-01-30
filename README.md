@@ -26,8 +26,8 @@ bash setup.sh
 
 ## Font
 
-I use the CaskaydiaCove Nerd Font. Open a terminal, execute the following
-command and select the desired font.
+This repository uses the CaskaydiaCove Nerd Font. To install this font, open a
+terminal and execute the following command and select the font.
 
 ```sh
 oh-my-post font install

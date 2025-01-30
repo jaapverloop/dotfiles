@@ -4,16 +4,13 @@ This repository contains my personal dotfiles.
 
 ## Installation
 
-Open a terminal and execute the following commands:
+Open a terminal, navigate to the folder where you want to clone this repository,
+and execute the following commands:
 
 ```sh
 git clone https://github.com/jaapverloop/dotfiles.git
 cd dotfiles
-xcode-select --install
-sudo softwareupdate --install-rosetta
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew analytics off
-/bin/bash setup.sh
+bash setup.sh
 ```
 
 ## Update

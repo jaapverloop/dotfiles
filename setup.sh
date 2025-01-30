@@ -6,6 +6,17 @@ set -o nounset
 START=$(date +%s)
 ROOTDIR="$(cd "$(dirname "${0}")"; echo $(pwd))"
 
+# install xcode
+xcode-select --install
+
+# install brew
+if [[ $(command -v brew) == "" ]]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# disable brew analytics
+brew analytics off
+
 # add other repositories to brew
 brew tap shivammathur/php
 brew tap shivammathur/extensions

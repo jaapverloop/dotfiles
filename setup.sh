@@ -58,7 +58,6 @@ brew install --cask \
     fork \
     google-chrome \
     imageoptim \
-    iterm2 \
     keeweb \
     microsoft-outlook \
     microsoft-teams \

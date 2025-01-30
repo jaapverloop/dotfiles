@@ -62,6 +62,7 @@ alias ll='ls -l'
 alias vim='nvim'
 alias lzd='lazydocker'
 alias lzg='lazygit'
+alias fzp='fzf --style full --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 
 # Set up fzf
 source <(fzf --zsh)

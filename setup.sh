@@ -12,6 +12,7 @@ brew tap shivammathur/extensions
 
 # install packages with brew
 brew install \
+    bat \
     composer \
     curl \
     fzf \

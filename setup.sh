@@ -103,6 +103,9 @@ pushd ${HOME}
     # custom oh-my-posh theme
     ln -s ${ROOTDIR}/prompt.omp.json .prompt.omp.json
 
+    # turn off the login banner
+    touch .hushlogin
+
     # setup other commandline tools in .bin folder
     python3 -m venv .venv
 

@@ -8,7 +8,6 @@ import = [
 
 padding.x = 10
 padding.y = 10
-
 decorations = "None"
 
 [font]
@@ -17,9 +16,7 @@ normal.family = "CaskaydiaCove Nerd Font Mono"
 bold.family = "CaskaydiaCove Nerd Font Mono"
 italic.family = "CaskaydiaCove Nerd Font Mono"
 bold_italic.family = "CaskaydiaCove Nerd Font"
-
 size = 16.0
-
 offset.y = 5
 
 [cursor]

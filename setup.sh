@@ -14,6 +14,7 @@ brew tap shivammathur/extensions
 brew install \
     composer \
     curl \
+    fzf \
     git \
     git-delta \
     gnupg \

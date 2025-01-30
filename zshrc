@@ -9,6 +9,7 @@ export HISTSIZE=1024
 export SAVEHIST=1024
 export GPG_TTY=$(tty)
 export PATH="$HOME/.bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+export FZF_DEFAULT_OPTS='--height 40% --tmux bottom,40% --layout reverse --border top'
 
 # Options
 setopt ALWAYS_TO_END
@@ -51,9 +52,6 @@ bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
 bindkey '^K' kill-whole-line
 bindkey '^L' clear-screen
-bindkey "^N" history-search-forward
-bindkey "^P" history-search-backward
-bindkey "^R" history-incremental-search-backward
 bindkey "^F" forward-word
 bindkey "^B" backward-word
 bindkey '^X' edit-command-line
@@ -64,6 +62,9 @@ alias ll='ls -l'
 alias vim='nvim'
 alias lzd='lazydocker'
 alias lzg='lazygit'
+
+# Set up fzf
+source <(fzf --zsh)
 
 # Plugin: https://github.com/zsh-users/zsh-autosuggestions
 ZSH_AUTOSUGGESTIONS_PATH=$HOME/.bin/repos/zsh-autosuggestions/zsh-autosuggestions.zsh

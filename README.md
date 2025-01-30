@@ -33,14 +33,25 @@ terminal and execute the following command and select the font.
 oh-my-post font install
 ```
 
-## Notes
+## Catppuccin themes
 
-* I use the iTerm2 terminal with the [Catppuccin] color scheme.
-* Instuctions to setup [GPG Signing].
+This repository uses the Catppuccin theme. To update the theme files, open a
+terminal, navigate to the folder where this repository is cloned and execute the
+following commands.
+
+```sh
+cd dotfiles
+curl -Lo alacritty/catppuccin-mocha.toml https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
+curl -Lo bat/themes/catppuchin-mocha.tmTheme https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme
+curl -Lo delta/themes/catppuccin.gitconfig https://github.com/catppuccin/delta/raw/main/catppuccin.gitconfig
+```
+
+## GPG Signing
+
+* Here you can find instuctions to setup [GPG Signing].
 
 ## License
 
 MIT, see **LICENSE** for more details.
 
-[Catppuccin]: https://github.com/catppuccin/iterm
 [GPG Signing]: https://gist.github.com/troyfontaine/18c9146295168ee9ca2b30c00bd1b41e

@@ -102,6 +102,11 @@ pushd ${HOME}
     mkdir -p .config
     ln -s ${ROOTDIR}/zellij .config/zellij
 
+    # setup bat
+    rm -rf .config/bat
+    mkdir -p .config
+    ln -s ${ROOTDIR}/bat .config/bat
+
     # setup tmux
     rm -f .tmux.conf
     ln -s ${ROOTDIR}/tmux.conf .tmux.conf

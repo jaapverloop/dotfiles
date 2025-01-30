@@ -42,6 +42,7 @@ brew install \
     sqlite \
     tmux \
     tokei \
+    zellij \
     zsh
 
 # install apps with brew
@@ -95,6 +96,11 @@ pushd ${HOME}
     rm -rf .config/alacritty
     mkdir -p .config
     ln -s ${ROOTDIR}/alacritty .config/alacritty
+
+    # setup zellij
+    rm -rf .config/zellij
+    mkdir -p .config
+    ln -s ${ROOTDIR}/zellij .config/zellij
 
     # setup tmux
     rm -f .tmux.conf

@@ -15,12 +15,13 @@ bash setup.sh
 
 ## Update
 
-Open a terminal and execute the following commands:
+Open a terminal, navigate to the folder where this repository is cloned, and
+execute the following commands:
 
 ```sh
 cd dotfiles
 git pull
-/bin/bash setup.sh
+bash setup.sh
 ```
 
 ## Font

@@ -18,7 +18,7 @@
 [difftool]
     prompt = false
 [merge]
-    conflictstyle = diff3
+    conflictstyle = zdiff3
 [mergetool]
     prompt = false
 [alias]

@@ -45,6 +45,7 @@ brew install \
     python@3.9 \
     rar \
     redis \
+    ripgrep \
     shivammathur/extensions/xdebug@7.4 \
     shivammathur/extensions/xdebug@8.1 \
     shivammathur/extensions/xdebug@8.2 \

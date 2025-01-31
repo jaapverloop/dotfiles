@@ -1,5 +1,4 @@
 # Globals
-export SHELL=`which zsh`
 export VISUAL=nvim
 export EDITOR=nvim
 export LC_ALL=en_US.UTF-8

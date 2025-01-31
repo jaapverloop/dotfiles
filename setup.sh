@@ -38,6 +38,7 @@ brew install \
     mariadb \
     neovim \
     ngrok \
+    nnn \
     node \
     node-sass \
     oh-my-posh \

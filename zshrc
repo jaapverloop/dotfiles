@@ -7,7 +7,15 @@ export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=1024
 export SAVEHIST=1024
 export GPG_TTY=$(tty)
-export PATH="$HOME/.bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+
+PATH="$HOME/.bin"
+PATH="$PATH:/opt/homebrew/bin"
+PATH="$PATH:/usr/local/bin"
+PATH="$PATH:/usr/bin"
+PATH="$PATH:/bin"
+PATH="$PATH:/usr/sbin"
+PATH="$PATH:/sbin"
+export PATH=$PATH
 
 # Options
 setopt ALWAYS_TO_END
@@ -16,7 +24,6 @@ setopt AUTO_CD
 setopt AUTO_LIST
 setopt AUTO_PUSHD
 setopt CHASE_LINKS
-setopt COMPLETE_IN_WORD
 setopt EXTENDED_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE

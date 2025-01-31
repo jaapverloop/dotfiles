@@ -105,6 +105,7 @@ alias lzd='lazydocker'
 alias lzg='lazygit'
 alias fzp='fzf --style full --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 
+# Util functions
 function link_php74 {
     brew unlink php
     brew unlink php@7.4

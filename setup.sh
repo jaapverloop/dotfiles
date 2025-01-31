@@ -26,6 +26,7 @@ brew install \
     bat \
     composer \
     curl \
+    fd \
     fzf \
     git \
     git-delta \

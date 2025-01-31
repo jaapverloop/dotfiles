@@ -45,25 +45,6 @@ zstyle ':completion:*' verbose yes
 autoload -U edit-command-line
 zle -N edit-command-line
 
-# Key bindings
-bindkey -v
-bindkey '^A' beginning-of-line
-bindkey '^E' end-of-line
-bindkey '^K' kill-whole-line
-bindkey '^L' clear-screen
-bindkey "^F" forward-word
-bindkey "^B" backward-word
-bindkey '^X' edit-command-line
-
-# Aliases
-alias ls='ls -G'
-alias ll='ls -l'
-alias vim='nvim'
-alias lzd='lazydocker'
-alias lzg='lazygit'
-alias fzp='fzf --style full --preview "bat --color=always --style=numbers --line-range=:500 {}"'
-
-# Set up fzf
 source <(fzf --zsh)
 
 # Plugin: https://github.com/zsh-users/zsh-autosuggestions
@@ -82,6 +63,24 @@ fi
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.prompt.omp.json)"
 fi
+
+# Key bindings
+bindkey -v
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+bindkey '^K' kill-whole-line
+bindkey '^L' clear-screen
+bindkey "^F" forward-word
+bindkey "^B" backward-word
+bindkey '^X' edit-command-line
+
+# Aliases
+alias ls='ls -G'
+alias ll='ls -l'
+alias vim='nvim'
+alias lzd='lazydocker'
+alias lzg='lazygit'
+alias fzp='fzf --style full --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 
 function link_php74 {
     brew unlink php

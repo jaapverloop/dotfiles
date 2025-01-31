@@ -62,6 +62,7 @@ brew install --cask \
     alacritty \
     boostnote \
     bruno \
+    displaylink \
     docker \
     dropbox \
     figma \

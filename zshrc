@@ -8,7 +8,6 @@ export HISTSIZE=1024
 export SAVEHIST=1024
 export GPG_TTY=$(tty)
 export PATH="$HOME/.bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
-export FZF_DEFAULT_OPTS='--height 40% --tmux bottom,40% --layout reverse --border top'
 
 # Options
 setopt ALWAYS_TO_END
@@ -63,6 +62,23 @@ fi
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.prompt.omp.json)"
 fi
+
+# Set up fzf
+FZF_FD_OPTS="--hidden --follow --exclude \".git\""
+export FZF_DEFAULT_OPTS='--height 40% --tmux bottom,40% --layout reverse --border top'
+export FZF_DEFAULT_COMMAND="fd ${FZF_FD_OPTS}"
+export FZF_CTRL_T_COMMAND="fd ${FZF_FD_OPTS}"
+export FZF_ALT_C_COMMAND="fd --type d ${FZF_FD_OPTS}"
+
+_fzf_compgen_path() {
+    eval "fd ${FZF_FD_OPTS} . \"${1}\""
+}
+
+_fzf_compgen_dir() {
+    eval "fd --type d ${FZF_FD_OPTS} . \"${1}\""
+}
+
+source <(fzf --zsh)
 
 # Key bindings
 bindkey -v

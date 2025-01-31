@@ -2,6 +2,9 @@
 
 This repository contains my personal dotfiles.
 
+> [!NOTE]
+> Tailered for a machine running macOS.
+
 ## Installation
 
 Open a terminal, navigate to the folder where you want to clone this repository,

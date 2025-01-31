@@ -59,7 +59,7 @@ if [[ -a $ZSH_SYNTAX_HIGHLIGHTING_PATH ]]; then
     source $ZSH_SYNTAX_HIGHLIGHTING_PATH
 fi
 
-# Prompt
+# Use Oh My Posh as prompt
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.prompt.omp.json)"
 fi

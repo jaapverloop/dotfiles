@@ -56,6 +56,7 @@ brew install \
     tmux \
     tokei \
     zellij \
+    zoxide \
     zsh
 
 # install apps with brew

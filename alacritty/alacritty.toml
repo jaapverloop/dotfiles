@@ -5,14 +5,12 @@ import = [
 ]
 
 [window]
-
 padding.x = 10
 padding.y = 10
 decorations = "Buttonless"
 option_as_alt = "Both"
 
 [font]
-
 normal.family = "CaskaydiaCove Nerd Font Mono"
 bold.family = "CaskaydiaCove Nerd Font Mono"
 italic.family = "CaskaydiaCove Nerd Font Mono"
@@ -21,12 +19,9 @@ size = 16.0
 offset.y = 5
 
 [cursor]
-
 style.blinking = "On"
 blink_interval = 500
 blink_timeout = 0
 
 [mouse]
-
 hide_when_typing = true
-

@@ -9,14 +9,10 @@ ehthumbs.db
 Thumbs.db
 
 # Editor files
-*.sublime-project
-*.sublime-workspace
 .vscode
 .idea
 
+# Folder to store temporary junk files
 junk/
-vim/.netrwhist
-vim/autoload/plug.vim.old
 
 __pycache__
-

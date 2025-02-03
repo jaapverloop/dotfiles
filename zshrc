@@ -1,21 +1,26 @@
-# Globals
-export VISUAL=nvim
-export EDITOR=nvim
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export HISTFILE="$HOME/.zsh_history"
-export HISTSIZE=1024
-export SAVEHIST=1024
-export GPG_TTY=$(tty)
-
+# Variables
+EDITOR=nvim
+GPG_TTY=$(tty)
+HISTDUP=erase
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=5000
+LANG=en_US.UTF-8
+LC_ALL=en_US.UTF-8
 PATH="$HOME/.bin"
-PATH="$PATH:/opt/homebrew/bin"
-PATH="$PATH:/usr/local/bin"
-PATH="$PATH:/usr/bin"
 PATH="$PATH:/bin"
-PATH="$PATH:/usr/sbin"
+PATH="$PATH:/opt/homebrew/bin"
 PATH="$PATH:/sbin"
-export PATH=$PATH
+PATH="$PATH:/usr/bin"
+PATH="$PATH:/usr/local/bin"
+PATH="$PATH:/usr/sbin"
+SAVEHIST=$HISTSIZE
+VISUAL=nvim
+
+# Export variables
+export GPG_TTY
+export LANG
+export LC_ALL
+export PATH
 
 # Options
 setopt ALWAYS_TO_END
@@ -62,10 +67,10 @@ fi
 
 # Set up fzf
 FZF_FD_OPTS="--hidden --follow --exclude \".git\""
-export FZF_DEFAULT_OPTS='--height 40% --tmux bottom,40% --layout reverse --border top'
-export FZF_DEFAULT_COMMAND="fd ${FZF_FD_OPTS}"
-export FZF_CTRL_T_COMMAND="fd ${FZF_FD_OPTS}"
-export FZF_ALT_C_COMMAND="fd --type d ${FZF_FD_OPTS}"
+FZF_DEFAULT_OPTS='--height 40% --tmux bottom,40% --layout reverse --border top'
+FZF_DEFAULT_COMMAND="fd ${FZF_FD_OPTS}"
+FZF_CTRL_T_COMMAND="fd ${FZF_FD_OPTS}"
+FZF_ALT_C_COMMAND="fd --type d ${FZF_FD_OPTS}"
 
 _fzf_compgen_path() {
     eval "fd ${FZF_FD_OPTS} . \"${1}\""

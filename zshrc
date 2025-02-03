@@ -51,11 +51,14 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Completion
-autoload -Uz compinit && compinit
+autoload -Uz compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu select=2
 zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 zstyle ':completion:*' verbose yes
+zmodload zsh/complist
+compinit
 
 # Make it possible to change a command in an editor
 autoload -U edit-command-line

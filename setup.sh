@@ -74,6 +74,7 @@ brew install --cask \
     figma \
     firefox \
     flux \
+    font-caskaydia-cove-nerd-font \
     fork \
     google-chrome \
     imageoptim \

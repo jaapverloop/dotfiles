@@ -27,15 +27,6 @@ git pull
 bash setup.sh
 ```
 
-## Font
-
-This repository uses the CaskaydiaCove Nerd Font. To install this font, open a
-terminal and execute the following command and select the font.
-
-```sh
-oh-my-post font install
-```
-
 ## Catppuccin themes
 
 This repository uses the Catppuccin theme. To update the theme files, open a

@@ -89,12 +89,12 @@ source <(fzf --zsh)
 # Key bindings
 bindkey -v
 bindkey '^A' beginning-of-line
+bindkey '^B' backward-word
 bindkey '^E' end-of-line
+bindkey '^F' forward-word
 bindkey '^K' kill-whole-line
 bindkey '^L' clear-screen
 bindkey '^X' edit-command-line
-bindkey "^B" backward-word
-bindkey "^F" forward-word
 
 # Aliases
 alias fzp='fzf --style full --preview "bat --color=always --style=numbers --line-range=:500 {}"'

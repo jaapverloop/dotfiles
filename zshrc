@@ -60,10 +60,6 @@ zstyle ':completion:*' verbose yes
 zmodload zsh/complist
 compinit
 
-# Make it possible to change a command in an editor
-autoload -U edit-command-line
-zle -N edit-command-line
-
 # Use Oh My Posh as prompt
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.prompt.omp.json)"
@@ -88,6 +84,10 @@ source <(fzf --zsh)
 
 # Set up Zoxide
 eval "$(zoxide init zsh)"
+
+# Make it possible to change a command in an editor
+autoload -U edit-command-line
+zle -N edit-command-line
 
 # Key bindings
 bindkey -v

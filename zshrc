@@ -108,8 +108,9 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 # Aliases
 alias cd='z'
 alias fzp='fzf --style full --preview "bat --color=always --style=numbers --line-range=:500 {}"'
-alias ll='ls -l'
-alias ls='ls --color'
+alias la='ll --all'
+alias ll='ls --long'
+alias ls='eza --color=always --icons=always --no-permissions --no-user --no-time --no-filesize'
 alias lzd='lazydocker'
 alias lzg='lazygit'
 alias vim='nvim'

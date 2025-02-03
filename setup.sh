@@ -26,6 +26,7 @@ brew install \
     bat \
     composer \
     curl \
+    eza \
     fd \
     fzf \
     git \

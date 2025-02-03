@@ -31,20 +31,20 @@ setopt AUTO_MENU
 setopt AUTO_PUSHD
 setopt CHASE_LINKS
 setopt COMPLETE_IN_WORD
-setopt EXTENDED_HISTORY
+setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_VERIFY
-setopt INC_APPEND_HISTORY_TIME
 setopt LIST_AMBIGUOUS
 setopt NO_BEEP
 setopt NO_HUP
 setopt NOTIFY
 setopt PUSHD_IGNORE_DUPS
 setopt PUSHD_SILENT
-setopt PROMPT_SUBST
+setopt SHAREHISTORY
 
 # Plugins
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh

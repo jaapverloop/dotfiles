@@ -94,12 +94,12 @@ bindkey "^B" backward-word
 bindkey "^F" forward-word
 
 # Aliases
-alias ls='ls -G'
+alias fzp='fzf --style full --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 alias ll='ls -l'
-alias vim='nvim'
+alias ls='ls -G'
 alias lzd='lazydocker'
 alias lzg='lazygit'
-alias fzp='fzf --style full --preview "bat --color=always --style=numbers --line-range=:500 {}"'
+alias vim='nvim'
 
 # Util functions
 function link_php74 {

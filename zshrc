@@ -1,5 +1,6 @@
 # Variables
 EDITOR=nvim
+FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 GPG_TTY=$(tty)
 HISTDUP=erase
 HISTFILE="$HOME/.zsh_history"

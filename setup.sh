@@ -60,6 +60,7 @@ brew install \
     zoxide \
     zsh \
     zsh-autosuggestions \
+    zsh-completions \
     zsh-syntax-highlighting
 
 # install apps with brew

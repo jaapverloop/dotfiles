@@ -40,14 +40,14 @@ setopt PUSHD_IGNORE_DUPS
 setopt PUSHD_SILENT
 setopt PROMPT_SUBST
 
-# Auto completion
+# Completion
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select=2
 zstyle ':completion:*::::' completer _expand _complete _ignored _approximate
 zstyle ':completion:*' verbose yes
 
-# Change command in editor
+# Make it possible to change a command in an editor
 autoload -U edit-command-line
 zle -N edit-command-line
 

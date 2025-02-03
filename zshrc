@@ -73,15 +73,15 @@ fi
 FZF_FD_OPTS="--hidden --follow --exclude \".git\""
 FZF_DEFAULT_OPTS='--height 40% --tmux bottom,40% --layout reverse --border top'
 FZF_DEFAULT_COMMAND="fd ${FZF_FD_OPTS}"
-FZF_CTRL_T_COMMAND="fd ${FZF_FD_OPTS}"
-FZF_ALT_C_COMMAND="fd --type d ${FZF_FD_OPTS}"
+FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
+FZF_ALT_C_COMMAND="fd ${FZF_FD_OPTS} --type d"
 
 _fzf_compgen_path() {
     eval "fd ${FZF_FD_OPTS} . \"${1}\""
 }
 
 _fzf_compgen_dir() {
-    eval "fd --type d ${FZF_FD_OPTS} . \"${1}\""
+    eval "fd ${FZF_FD_OPTS} --type d . \"${1}\""
 }
 
 source <(fzf --zsh)

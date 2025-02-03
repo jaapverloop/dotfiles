@@ -100,7 +100,7 @@ bindkey '^X' edit-command-line
 # Aliases
 alias fzp='fzf --style full --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 alias ll='ls -l'
-alias ls='ls -G'
+alias ls='ls --color'
 alias lzd='lazydocker'
 alias lzg='lazygit'
 alias vim='nvim'

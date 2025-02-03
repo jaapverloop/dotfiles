@@ -86,6 +86,9 @@ _fzf_compgen_dir() {
 
 source <(fzf --zsh)
 
+# Set up Zoxide
+eval "$(zoxide init zsh)"
+
 # Key bindings
 bindkey -v
 bindkey '^A' beginning-of-line
@@ -103,6 +106,7 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Aliases
+alias cd='z'
 alias fzp='fzf --style full --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 alias ll='ls -l'
 alias ls='ls --color'

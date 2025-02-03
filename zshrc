@@ -89,9 +89,9 @@ bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
 bindkey '^K' kill-whole-line
 bindkey '^L' clear-screen
-bindkey "^F" forward-word
-bindkey "^B" backward-word
 bindkey '^X' edit-command-line
+bindkey "^B" backward-word
+bindkey "^F" forward-word
 
 # Aliases
 alias ls='ls -G'

@@ -51,8 +51,6 @@ zstyle ':completion:*' verbose yes
 autoload -U edit-command-line
 zle -N edit-command-line
 
-source <(fzf --zsh)
-
 # Plugin: https://github.com/zsh-users/zsh-autosuggestions
 ZSH_AUTOSUGGESTIONS_PATH=$HOME/.bin/repos/zsh-autosuggestions/zsh-autosuggestions.zsh
 if [[ -a $ZSH_AUTOSUGGESTIONS_PATH ]]; then

@@ -66,21 +66,13 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
 fi
 
 # Set up fzf
-FZF_FD_OPTS="--hidden --follow --exclude \".git\""
-FZF_DEFAULT_OPTS='--height 40% --tmux bottom,40% --layout reverse --border top'
-FZF_DEFAULT_COMMAND="fd ${FZF_FD_OPTS}"
-FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
-FZF_ALT_C_COMMAND="fd ${FZF_FD_OPTS} --type d"
-
-_fzf_compgen_path() {
-    eval "fd ${FZF_FD_OPTS} . \"${1}\""
-}
-
-_fzf_compgen_dir() {
-    eval "fd ${FZF_FD_OPTS} --type d . \"${1}\""
-}
-
 source <(fzf --zsh)
+export FZF_DEFAULT_OPTS='--style full --margin 2,4 --padding 1 --border'
+export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude \".git\""
+export FZF_CTRL_T_OPTS="--preview 'bat --number --color=always --line-range :500 {}'"
+export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND} --type f"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+export FZF_ALT_C_COMMAND="${FZF_DEFAULT_COMMAND} --type d"
 
 # Set up Zoxide
 eval "$(zoxide init zsh)"

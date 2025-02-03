@@ -28,6 +28,7 @@ setopt ALWAYS_TO_END
 setopt APPEND_HISTORY
 setopt AUTO_LIST
 setopt AUTO_MENU
+setopt AUTO_PARAM_SLASH
 setopt AUTO_PUSHD
 setopt CHASE_LINKS
 setopt COMPLETE_IN_WORD

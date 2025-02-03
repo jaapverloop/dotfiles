@@ -54,6 +54,7 @@ brew install \
     shivammathur/php/php@8.1 \
     shivammathur/php/php@8.2 \
     sqlite \
+    tlrc \
     tmux \
     tokei \
     zellij \

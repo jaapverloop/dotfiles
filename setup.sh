@@ -58,7 +58,9 @@ brew install \
     tokei \
     zellij \
     zoxide \
-    zsh
+    zsh \
+    zsh-autosuggestions \
+    zsh-syntax-highlighting
 
 # install apps with brew
 brew install --cask \
@@ -150,13 +152,6 @@ pushd ${HOME}
     pushd .bin
         composer global require psy/psysh
         composer global require friendsofphp/php-cs-fixer
-
-        mkdir -p repos
-
-        pushd repos
-            git clone https://github.com/zsh-users/zsh-autosuggestions.git || true
-            git clone https://github.com/zsh-users/zsh-syntax-highlighting.git || true
-        popd
 
         ln -sf ${HOME}/.venv/bin/fab
         ln -sf ${HOME}/.venv/bin/ansible-vault

@@ -40,6 +40,10 @@ setopt PUSHD_IGNORE_DUPS
 setopt PUSHD_SILENT
 setopt PROMPT_SUBST
 
+# Plugins
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # Completion
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
@@ -50,18 +54,6 @@ zstyle ':completion:*' verbose yes
 # Make it possible to change a command in an editor
 autoload -U edit-command-line
 zle -N edit-command-line
-
-# Plugin: https://github.com/zsh-users/zsh-autosuggestions
-ZSH_AUTOSUGGESTIONS_PATH=$HOME/.bin/repos/zsh-autosuggestions/zsh-autosuggestions.zsh
-if [[ -a $ZSH_AUTOSUGGESTIONS_PATH ]]; then
-    source $ZSH_AUTOSUGGESTIONS_PATH
-fi
-
-# Plugin: https://github.com/zsh-users/zsh-syntax-highlighting
-ZSH_SYNTAX_HIGHLIGHTING_PATH=$HOME/.bin/repos/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-if [[ -a $ZSH_SYNTAX_HIGHLIGHTING_PATH ]]; then
-    source $ZSH_SYNTAX_HIGHLIGHTING_PATH
-fi
 
 # Use Oh My Posh as prompt
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then

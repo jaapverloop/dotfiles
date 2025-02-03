@@ -95,6 +95,8 @@ bindkey '^F' forward-word
 bindkey '^K' kill-whole-line
 bindkey '^L' clear-screen
 bindkey '^X' edit-command-line
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char

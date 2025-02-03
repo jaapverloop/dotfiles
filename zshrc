@@ -96,6 +96,10 @@ bindkey '^F' forward-word
 bindkey '^K' kill-whole-line
 bindkey '^L' clear-screen
 bindkey '^X' edit-command-line
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Aliases
 alias fzp='fzf --style full --preview "bat --color=always --style=numbers --line-range=:500 {}"'

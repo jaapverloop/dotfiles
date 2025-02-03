@@ -8,7 +8,7 @@ import = [
 
 padding.x = 10
 padding.y = 10
-decorations = "None"
+decorations = "Buttonless"
 option_as_alt = "Both"
 
 [font]

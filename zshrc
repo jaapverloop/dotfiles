@@ -7,12 +7,12 @@ HISTSIZE=5000
 LANG=en_US.UTF-8
 LC_ALL=$LANG
 PATH="$HOME/.bin"
-PATH="$PATH:/bin"
 PATH="$PATH:/opt/homebrew/bin"
-PATH="$PATH:/sbin"
-PATH="$PATH:/usr/bin"
 PATH="$PATH:/usr/local/bin"
+PATH="$PATH:/usr/bin"
+PATH="$PATH:/bin"
 PATH="$PATH:/usr/sbin"
+PATH="$PATH:/sbin"
 SAVEHIST=$HISTSIZE
 VISUAL=nvim
 

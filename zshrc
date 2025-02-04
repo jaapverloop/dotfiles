@@ -62,7 +62,7 @@ compinit
 
 # Use Oh My Posh as prompt
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config $HOME/.prompt.omp.json)"
+  eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/config.json)"
 fi
 
 # Make it possible to change a command in an editor

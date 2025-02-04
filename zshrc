@@ -67,15 +67,20 @@ fi
 
 # Set up fzf
 source <(fzf --zsh)
-export FZF_DEFAULT_OPTS='--style full --margin 2,4 --padding 1 --border'
+export FZF_DEFAULT_OPTS='--style full --height 60% --margin 2,4 --padding 1 --border'
 export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude \".git\""
 export FZF_CTRL_T_OPTS="--preview 'bat --number --color=always --line-range :500 {}'"
 export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND} --type f"
 export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
 export FZF_ALT_C_COMMAND="${FZF_DEFAULT_COMMAND} --type d"
 
-# Set up Zoxide
-eval "$(zoxide init zsh)"
+_fzf_compgen_path() {
+    eval "${FZF_CTRL_T_COMMAND} . \"${1}\""
+}
+
+_fzf_compgen_dir() {
+    eval "${FZF_ALT_C_COMMAND} . \"${1}\""
+}
 
 # Make it possible to change a command in an editor
 autoload -U edit-command-line

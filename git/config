@@ -9,7 +9,6 @@
     editor = vim
     autocrlf = false
     safecrlf = false
-    excludesfile = ~/.gitignore
     pager = delta
 [color]
     ui = true

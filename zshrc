@@ -65,23 +65,6 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.prompt.omp.json)"
 fi
 
-# Set up fzf
-source <(fzf --zsh)
-export FZF_DEFAULT_OPTS='--style full --height 60% --margin 2,4 --padding 1 --border'
-export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude \".git\""
-export FZF_CTRL_T_OPTS="--preview 'bat --number --color=always --line-range :500 {}'"
-export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND} --type f"
-export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
-export FZF_ALT_C_COMMAND="${FZF_DEFAULT_COMMAND} --type d"
-
-_fzf_compgen_path() {
-    eval "${FZF_CTRL_T_COMMAND} . \"${1}\""
-}
-
-_fzf_compgen_dir() {
-    eval "${FZF_ALT_C_COMMAND} . \"${1}\""
-}
-
 # Make it possible to change a command in an editor
 autoload -U edit-command-line
 zle -N edit-command-line
@@ -101,6 +84,23 @@ bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
+
+# Set up fzf
+source <(fzf --zsh)
+export FZF_DEFAULT_OPTS='--style full --height 60% --margin 2,4 --padding 1 --border'
+export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude \".git\""
+export FZF_CTRL_T_OPTS="--preview 'bat --number --color=always --line-range :500 {}'"
+export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND} --type f"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+export FZF_ALT_C_COMMAND="${FZF_DEFAULT_COMMAND} --type d"
+
+_fzf_compgen_path() {
+    eval "${FZF_CTRL_T_COMMAND} . \"${1}\""
+}
+
+_fzf_compgen_dir() {
+    eval "${FZF_ALT_C_COMMAND} . \"${1}\""
+}
 
 # Set up Zoxide
 eval "$(zoxide init zsh)"

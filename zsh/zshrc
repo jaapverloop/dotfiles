@@ -17,7 +17,6 @@ SAVEHIST=$HISTSIZE
 VISUAL=nvim
 
 # Export variables
-export GPG_TTY
 export LANG
 export LC_ALL
 export PATH

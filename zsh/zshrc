@@ -105,10 +105,11 @@ _fzf_compgen_dir() {
 eval "$(zoxide init zsh)"
 
 # Aliases
-# alias cd='z'
+alias cd='z'
+alias lf='ls --long --all'
 alias la='ll --all'
-alias ll='ls --long'
-alias ls='eza --color=always --icons=always --no-permissions --no-user --no-time --no-filesize --group-directories-first'
+alias ll='ls --long --no-permissions --no-user --no-time --no-filesize'
+alias ls='eza --color=always --icons=always --group-directories-first'
 alias lzd='lazydocker'
 alias lzg='lazygit'
 alias vim='nvim'

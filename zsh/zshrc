@@ -1,25 +1,20 @@
 # Variables
-EDITOR=nvim
-GPG_TTY=$(tty)
-HISTDUP=erase
-HISTFILE="$HOME/.zsh_history"
-HISTSIZE=5000
-LANG=en_US.UTF-8
-LC_ALL=$LANG
-PATH="$HOME/.bin"
-PATH="$PATH:/opt/homebrew/bin"
-PATH="$PATH:/usr/local/bin"
-PATH="$PATH:/usr/bin"
-PATH="$PATH:/bin"
-PATH="$PATH:/usr/sbin"
-PATH="$PATH:/sbin"
-SAVEHIST=$HISTSIZE
-VISUAL=nvim
-
-# Export variables
-export LANG
-export LC_ALL
-export PATH
+export EDITOR=nvim
+export GPG_TTY=$(tty)
+export HISTDUP=erase
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=5000
+export LANG=en_US.UTF-8
+export LC_ALL=$LANG
+export PATH="$HOME/.bin"
+export PATH="$PATH:/opt/homebrew/bin"
+export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:/usr/bin"
+export PATH="$PATH:/bin"
+export PATH="$PATH:/usr/sbin"
+export PATH="$PATH:/sbin"
+export SAVEHIST=$HISTSIZE
+export VISUAL=$EDITOR
 
 # Options
 setopt ALWAYS_TO_END

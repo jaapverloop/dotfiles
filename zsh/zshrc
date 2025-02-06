@@ -50,12 +50,12 @@ zmodload zsh/complist
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select=2
 
-# Use Oh My Posh as prompt
+# Setup Oh My Posh (prompt theme engine)
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/config.json)"
 fi
 
-# Make it possible to change a command in an editor
+# Make it possible to change a command in Neovim
 autoload -U edit-command-line
 zle -N edit-command-line
 
@@ -75,7 +75,7 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
-# Set up fzf
+# Setup fzf (command-line fuzzy-finder)
 source <(fzf --zsh)
 export FZF_DEFAULT_OPTS='--style full --height 60% --margin 2,4 --padding 1 --border'
 export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude \".git\""
@@ -92,7 +92,7 @@ _fzf_compgen_dir() {
     eval "${FZF_ALT_C_COMMAND} . \"${1}\""
 }
 
-# Set up Zoxide
+# Setup Zoxide (a smarter cd command)
 eval "$(zoxide init zsh)"
 
 # Aliases

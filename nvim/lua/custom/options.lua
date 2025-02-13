@@ -1,5 +1,6 @@
 vim.opt.backup = false
 vim.opt.clipboard = 'unnamedplus'
+vim.opt.colorcolumn = '80'
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 vim.opt.conceallevel = 0
 vim.opt.confirm = true

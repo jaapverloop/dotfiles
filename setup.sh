@@ -7,7 +7,7 @@ START=$(date +%s)
 ROOTDIR="$(cd "$(dirname "${0}")"; echo $(pwd))"
 
 # Install xcode
-xcode-select --install
+xcode-select --install || true
 
 # Install brew
 if [[ $(command -v brew) == "" ]]; then

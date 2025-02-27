@@ -37,6 +37,7 @@ brew install \
     htop \
     jesseduffield/lazydocker/lazydocker \
     jesseduffield/lazygit/lazygit \
+    jq \
     mariadb \
     neovim \
     ngrok \

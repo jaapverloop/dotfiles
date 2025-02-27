@@ -101,6 +101,11 @@ brew install --cask \
 # Install yazi theme
 ya pack -a yazi-rs/flavors:catppuccin-mocha
 
+CONFIG_FILES=(
+    .editorconfig
+    .zshrc
+)
+
 CONFIG_DIRS=(
     alacritty
     bat
@@ -117,13 +122,12 @@ pushd ${HOME}
     # Turn off the login banner
     touch .hushlogin
 
-    # Link default .editorconfig file
-    rm -f .editorconfig
-    ln -s ${ROOTDIR}/.editorconfig
-
-    # Link config file zsh
-    rm -f .zshrc
-    ln -s ${ROOTDIR}/.zshrc
+    # Link config files
+    for CONFIG_FILE in "${CONFIG_FILES[@]}"
+    do
+        rm -f ${CONFIG_FILE}
+        ln -s ${ROOTDIR}/${CONFIG_FILE}
+    done
 
     # Create config dirs
     mkdir -p .config/bin

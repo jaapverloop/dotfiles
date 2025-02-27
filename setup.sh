@@ -117,6 +117,10 @@ pushd ${HOME}
     # Turn off the login banner
     touch .hushlogin
 
+    # Link default .editorconfig file
+    rm -f .editorconfig
+    ln -s ${ROOTDIR}/.editorconfig
+
     # Link config file zsh
     rm -f .zshrc
     ln -s ${ROOTDIR}/zsh/zshrc .zshrc

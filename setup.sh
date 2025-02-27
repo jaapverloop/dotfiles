@@ -123,7 +123,7 @@ pushd ${HOME}
 
     # Link config file zsh
     rm -f .zshrc
-    ln -s ${ROOTDIR}/zsh/zshrc .zshrc
+    ln -s ${ROOTDIR}/.zshrc
 
     # Create config dirs
     mkdir -p .config/bin

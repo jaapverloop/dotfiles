@@ -60,6 +60,7 @@ brew install \
     tlrc \
     tmux \
     tokei \
+    yazi \
     zellij \
     zoxide \
     zsh \
@@ -98,6 +99,9 @@ brew install --cask \
     webtorrent \
     whatsapp
 
+# Install yazi theme
+ya pack -a yazi-rs/flavors:catppuccin-mocha
+
 CONFIG_DIRS=(
     alacritty
     bat
@@ -106,6 +110,7 @@ CONFIG_DIRS=(
     nvim
     oh-my-posh
     tmux
+    yazi
     zellij
 )
 

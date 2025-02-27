@@ -6,22 +6,22 @@ set -o nounset
 START=$(date +%s)
 ROOTDIR="$(cd "$(dirname "${0}")"; echo $(pwd))"
 
-# install xcode
+# Install xcode
 xcode-select --install
 
-# install brew
+# Install brew
 if [[ $(command -v brew) == "" ]]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-# disable brew analytics
+# Disable brew analytics
 brew analytics off
 
-# add other repositories to brew
+# Add other repositories to brew
 brew tap shivammathur/php
 brew tap shivammathur/extensions
 
-# install packages with brew
+# Install packages with brew
 brew install \
     bat \
     composer \
@@ -64,7 +64,7 @@ brew install \
     zsh-autosuggestions \
     zsh-syntax-highlighting
 
-# install apps with brew
+# Install apps with brew
 brew install --cask \
     alacritty \
     boostnote \

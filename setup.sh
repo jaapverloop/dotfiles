@@ -98,70 +98,59 @@ brew install --cask \
     webtorrent \
     whatsapp
 
+CONFIG_DIRS=(
+    alacritty
+    bat
+    delta
+    git
+    nvim
+    oh-my-posh
+    tmux
+    zellij
+)
+
 pushd ${HOME}
-    # setup zsh
-    rm -f .zshrc
-    ln -s ${ROOTDIR}/zshrc .zshrc
-
-    # setup nvim
-    rm -rf .config/nvim
-    mkdir -p .config
-    ln -s ${ROOTDIR}/nvim .config/nvim
-
-    # setup git
-    rm -f .gitconfig
-    rm -f .gitignore
-    ln -s ${ROOTDIR}/gitconfig .gitconfig
-    ln -s ${ROOTDIR}/gitignore .gitignore
-
-    # setup alacritty
-    rm -rf .config/alacritty
-    mkdir -p .config
-    ln -s ${ROOTDIR}/alacritty .config/alacritty
-
-    # setup zellij
-    rm -rf .config/zellij
-    mkdir -p .config
-    ln -s ${ROOTDIR}/zellij .config/zellij
-
-    # setup bat
-    rm -rf .config/bat
-    mkdir -p .config
-    ln -s ${ROOTDIR}/bat .config/bat
-
-    # setup tmux
-    rm -f .tmux.conf
-    ln -s ${ROOTDIR}/tmux.conf .tmux.conf
-
-    # custom oh-my-posh theme
-    ln -s ${ROOTDIR}/prompt.omp.json .prompt.omp.json
-
-    # turn off the login banner
+    # Turn off the login banner
     touch .hushlogin
 
-    # setup other commandline tools in .bin folder
-    python3 -m venv .venv
+    # Link config file zsh
+    rm -f .zshrc
+    ln -s ${ROOTDIR}/zsh/zshrc .zshrc
 
-    source .venv/bin/activate
+    # Create config dirs
+    mkdir -p .config/bin
 
-    pip install --upgrade pip
-    pip install Fabric3
-    pip install ansible
-    pip install Sphinx
-    pip install sphinx-rtd-theme
+    pushd .config
+        # Link config dirs
+        for CONFIG_DIR in "${CONFIG_DIRS[@]}"
+        do
+            rm -rf ${CONFIG_DIR}
+            ln -s ${ROOTDIR}/${CONFIG_DIR} ${CONFIG_DIR}
+        done
 
-    deactivate
+        # Install Python tools in a virtualenv
+        python3 -m venv python-tools
 
-    mkdir -p .bin
+        source python-tools/bin/activate
 
-    pushd .bin
-        composer global require psy/psysh
-        composer global require friendsofphp/php-cs-fixer
+        pip install --upgrade pip
+        pip install Fabric3
+        pip install ansible
+        pip install Sphinx
+        pip install sphinx-rtd-theme
 
-        ln -sf ${HOME}/.venv/bin/fab
-        ln -sf ${HOME}/.venv/bin/ansible-vault
-        ln -sf ${HOME}/.venv/bin/sphinx-build
-        ln -sf ${HOME}/.venv/bin/sphinx-quickstart
+        deactivate
+    popd
+
+    # Install PHP tools
+    composer global require psy/psysh
+    composer global require friendsofphp/php-cs-fixer
+
+    pushd .config/bin
+        ln -sf ${HOME}/.config/python-tools/bin/fab
+        ln -sf ${HOME}/.config/python-tools/bin/ansible-vault
+        ln -sf ${HOME}/.config/python-tools/bin/sphinx-build
+        ln -sf ${HOME}/.config/python-tools/bin/sphinx-quickstart
         ln -sf ${HOME}/.composer/vendor/bin/psysh
         ln -sf ${HOME}/.composer/vendor/bin/php-cs-fixer
     popd

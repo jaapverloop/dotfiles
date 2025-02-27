@@ -31,6 +31,7 @@ brew install \
     fzf \
     git \
     git-delta \
+    git-lfs \
     gnupg \
     gpg2 \
     htop \

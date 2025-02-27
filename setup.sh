@@ -103,6 +103,7 @@ ya pack -a yazi-rs/flavors:catppuccin-mocha
 
 CONFIG_FILES=(
     .editorconfig
+    .hushlogin
     .zshrc
 )
 
@@ -119,9 +120,6 @@ CONFIG_DIRS=(
 )
 
 pushd ${HOME}
-    # Turn off the login banner
-    touch .hushlogin
-
     # Link config files
     for CONFIG_FILE in "${CONFIG_FILES[@]}"
     do

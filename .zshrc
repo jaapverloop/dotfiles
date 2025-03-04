@@ -105,21 +105,4 @@ alias lzd='lazydocker'
 alias lzg='lazygit'
 alias vim='nvim'
 
-# Util functions
-function link_php74 {
-    brew unlink php
-    brew unlink php@7.4
-    brew link php@7.4 --force --overwrite
-}
-
-function link_php81 {
-    brew unlink php
-    brew unlink php@8.1
-    brew link php@8.1 --force --overwrite
-}
-
-function link_php82 {
-    brew unlink php
-    brew unlink php@8.2
-    brew link php@8.2 --force --overwrite
 }

@@ -49,12 +49,8 @@ brew install \
     rar \
     redis \
     ripgrep \
-    shivammathur/extensions/xdebug@7.4 \
-    shivammathur/extensions/xdebug@8.1 \
-    shivammathur/extensions/xdebug@8.2 \
-    shivammathur/php/php@7.4 \
-    shivammathur/php/php@8.1 \
-    shivammathur/php/php@8.2 \
+    shivammathur/extensions/xdebug@8.4 \
+    shivammathur/php/php@8.4 \
     sqlite \
     tlrc \
     tmux \

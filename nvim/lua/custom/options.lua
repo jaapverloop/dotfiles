@@ -1,56 +1,35 @@
-vim.opt.backup = false
-vim.opt.clipboard = 'unnamedplus'
+local xdg_data_home = os.getenv('XDG_DATA_HOME')
+
+if not xdg_data_hone then
+    xdg_data_home = vim.fn.expand('~/.local/share')
+end
+
 vim.opt.colorcolumn = '80'
-vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
-vim.opt.conceallevel = 0
-vim.opt.confirm = true
 vim.opt.cursorline = true
 vim.opt.errorbells = false
 vim.opt.expandtab = true
-vim.opt.fileencoding = 'utf-8'
-vim.opt.fileformats = {'unix', 'dos', 'mac' }
-vim.opt.hidden = true
-vim.opt.history = 1000
-vim.opt.hlsearch = true
-vim.opt.ignorecase = true
-vim.opt.incsearch = true
-vim.opt.joinspaces = false
-vim.opt.laststatus = 2
-vim.opt.lazyredraw = true
 vim.opt.list = true
 vim.opt.listchars = 'tab:▸ ,trail:.'
-vim.opt.mouse = 'a'
 vim.opt.number = true
 vim.opt.numberwidth = 5
-vim.opt.pumblend = 10
-vim.opt.pumheight = 10
-vim.opt.ruler = true
 vim.opt.scrolloff = 5
 vim.opt.shiftround = true
 vim.opt.shiftwidth = 4
 vim.opt.shortmess:append({ W = true, I = true, c = true, C = true })
-vim.opt.showcmd = true
-vim.opt.showmatch = true
-vim.opt.showmode = false
 vim.opt.sidescrolloff = 5
 vim.opt.signcolumn = 'yes'
 vim.opt.smartcase = true
 vim.opt.smartindent = true
-vim.opt.smarttab = true
 vim.opt.softtabstop = 4
 vim.opt.splitbelow = true
 vim.opt.splitkeep = 'screen'
 vim.opt.splitright = true
-vim.opt.swapfile = false
 vim.opt.tabstop = 4
-vim.opt.termguicolors = true
-vim.opt.title = true
-vim.opt.undofile = true
-vim.opt.undolevels = 1000
 vim.opt.virtualedit = 'onemore'
 vim.opt.visualbell = true
-vim.opt.wildignore = '*.o,*~,*.pyc'
-vim.opt.wildmenu = true
-vim.opt.wildmode = 'longest:full,full'
 vim.opt.wrap = false
-vim.opt.writebackup = false
+
+-- Directory settings
+vim.opt.backupdir = xdg_data_home .. "/nvim/backup//"
+vim.opt.directory = xdg_data_home .. "/nvim/swap//"
+vim.opt.undodir = xdg_data_home .. "/nvim/undo//"

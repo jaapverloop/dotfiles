@@ -1,0 +1,14 @@
+font-family = CaskaydiaCove Nerd Font Mono
+font-family-bold = CaskaydiaCove Nerd Font Mono
+font-family-italic = CaskaydiaCove Nerd Font Mono
+font-family-bold-italic = CaskaydiaCove Nerd Font
+font-size = 16
+font-thicken = true
+font-thicken-strength = 25
+theme = catppuccin-mocha
+mouse-hide-while-typing = true
+title = " "
+window-padding-x = 10
+window-padding-y = 10
+window-theme = system
+macos-titlebar-proxy-icon = hidden

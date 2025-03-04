@@ -75,6 +75,7 @@ brew install --cask \
     flux \
     font-caskaydia-cove-nerd-font \
     fork \
+    ghostty \
     google-chrome \
     imageoptim \
     keeweb \
@@ -107,6 +108,7 @@ CONFIG_DIRS=(
     alacritty
     bat
     delta
+    ghostty
     git
     nvim
     oh-my-posh

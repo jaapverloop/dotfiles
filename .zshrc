@@ -105,4 +105,12 @@ alias lzd='lazydocker'
 alias lzg='lazygit'
 alias vim='nvim'
 
+# Shell wrapper which automatically moves into the directory when exiting yazi.
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
 }

@@ -135,7 +135,7 @@ pushd ${HOME}
         for CONFIG_DIR in "${CONFIG_DIRS[@]}"
         do
             rm -rf ${CONFIG_DIR}
-            ln -s ${ROOTDIR}/${CONFIG_DIR} ${CONFIG_DIR}
+            ln -s ${ROOTDIR}/${CONFIG_DIR}
         done
 
         # Install Python tools in a virtualenv

@@ -64,7 +64,6 @@ brew install \
 
 # Install apps with brew
 brew install --cask \
-    alacritty \
     boostnote \
     bruno \
     displaylink \
@@ -105,7 +104,6 @@ CONFIG_FILES=(
 )
 
 CONFIG_DIRS=(
-    alacritty
     bat
     delta
     ghostty

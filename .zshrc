@@ -77,7 +77,8 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Setup fzf (command-line fuzzy-finder)
 source <(fzf --zsh)
-export FZF_DEFAULT_OPTS='--height 40% --tmux bottom,40% --style full --border top'
+export FZF_TMUX_OPTS="-p80%,60%"
+export FZF_DEFAULT_OPTS='--style full'
 export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude \".git\""
 export FZF_CTRL_T_OPTS="--preview 'bat --number --color=always --line-range :500 {}'"
 export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND} --type f"

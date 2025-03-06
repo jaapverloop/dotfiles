@@ -12,3 +12,4 @@ window-padding-x = 10
 window-padding-y = 10
 window-theme = system
 macos-titlebar-proxy-icon = hidden
+macos-option-as-alt = left

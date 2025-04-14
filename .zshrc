@@ -8,6 +8,7 @@ export LANG=en_US.UTF-8
 export LC_ALL=$LANG
 export PATH="$HOME/.config/bin"
 export PATH="$PATH:/opt/homebrew/bin"
+export PATH="$PATH:/opt/homebrew/sbin"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/usr/bin"
 export PATH="$PATH:/usr/sbin"

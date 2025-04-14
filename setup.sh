@@ -142,6 +142,7 @@ pushd ${HOME}
         pip install --upgrade pip
         pip install ansible
         pip install Fabric3
+        pip install python-dotenv
         pip install Sphinx
         pip install sphinx-rtd-theme
 

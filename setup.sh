@@ -140,8 +140,8 @@ pushd ${HOME}
         source python-tools/bin/activate
 
         pip install --upgrade pip
-        pip install Fabric3
         pip install ansible
+        pip install Fabric3
         pip install Sphinx
         pip install sphinx-rtd-theme
 

@@ -81,6 +81,7 @@ brew install --cask \
     microsoft-outlook \
     microsoft-teams \
     postman \
+    phpstorm \
     raycast \
     sequel-ace \
     signal \

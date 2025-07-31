@@ -52,3 +52,5 @@
     navigate=true
     side-by-side=true
     features = Catppuccin Mocha
+[advice]
+	skippedCherryPicks = false

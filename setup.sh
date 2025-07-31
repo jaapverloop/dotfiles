@@ -154,12 +154,12 @@ pushd ${HOME}
     composer global require friendsofphp/php-cs-fixer
 
     pushd .config/bin
-        ln -sf ${HOME}/.config/python-tools/bin/fab
         ln -sf ${HOME}/.config/python-tools/bin/ansible-vault
+        ln -sf ${HOME}/.config/python-tools/bin/fab
         ln -sf ${HOME}/.config/python-tools/bin/sphinx-build
         ln -sf ${HOME}/.config/python-tools/bin/sphinx-quickstart
-        ln -sf ${HOME}/.composer/vendor/bin/psysh
         ln -sf ${HOME}/.composer/vendor/bin/php-cs-fixer
+        ln -sf ${HOME}/.composer/vendor/bin/psysh
     popd
 popd
 

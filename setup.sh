@@ -32,6 +32,7 @@ brew install \
     git \
     git-delta \
     git-lfs \
+    glow \
     gnupg \
     gpg2 \
     htop \

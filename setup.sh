@@ -95,9 +95,6 @@ brew install --cask \
     webtorrent \
     whatsapp
 
-# Install yazi theme
-ya pack -a yazi-rs/flavors:catppuccin-mocha
-
 CONFIG_FILES=(
     .editorconfig
     .hushlogin

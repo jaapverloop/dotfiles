@@ -35,7 +35,7 @@ following commands.
 
 ```sh
 cd dotfiles
-curl -Lo alacritty/catppuccin-mocha.toml https://github.com/catppuccin/alacritty/raw/main/catppuccin-mocha.toml
+curl -Lo ghostty/themes/catppuccin-mocha.conf https://github.com/catppuccin/ghostty/raw/main/themes/catppuccin-mocha.conf
 curl -Lo bat/themes/catppuchin-mocha.tmTheme https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme
 curl -Lo delta/themes/catppuccin.gitconfig https://github.com/catppuccin/delta/raw/main/catppuccin.gitconfig
 ```

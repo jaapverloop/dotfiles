@@ -28,10 +28,10 @@
     default = current
     ff = only
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true
-	process = git-lfs filter-process
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    required = true
+    process = git-lfs filter-process
 [url "git@github.com:"]
     insteadOf = gh:
 [status]
@@ -53,4 +53,4 @@
     side-by-side=true
     features = Catppuccin Mocha
 [advice]
-	skippedCherryPicks = false
+    skippedCherryPicks = false

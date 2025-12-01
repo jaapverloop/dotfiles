@@ -26,5 +26,6 @@ return {
     vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
     vim.keymap.set('n', '<leader>fl', builtin.loclist, {})
     vim.keymap.set('n', '<leader>fq', builtin.quickfix, {})
+    vim.keymap.set('n', '<leader>fc', builtin.current_buffer_fuzzy_find)
   end,
 }

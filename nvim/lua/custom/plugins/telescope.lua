@@ -13,8 +13,8 @@ return {
       pickers = {
         buffers = {
           mappings = {
-            i = { ["<c-d>"] = actions.delete_buffer },
-            n = { ["<c-d>"] = actions.delete_buffer },
+            i = { ['<c-d>'] = actions.delete_buffer },
+            n = { ['<c-d>'] = actions.delete_buffer },
           }
         }
       }

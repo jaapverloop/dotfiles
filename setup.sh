@@ -42,7 +42,7 @@ brew install \
     node-sass \
     oh-my-posh \
     pinentry-mac \
-    python@3.9 \
+    python@3.14 \
     rar \
     redis \
     ripgrep \

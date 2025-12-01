@@ -20,7 +20,6 @@ brew analytics off
 # Install packages with brew
 brew install \
     bat \
-    composer \
     curl \
     eza \
     fd \
@@ -120,6 +119,13 @@ pushd ${HOME}
 
     # Create config dirs
     mkdir -p .config/bin
+
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    php -r "copy('https://composer.github.io/installer.sig', 'composer.sig');"
+    php -r "if (hash_file('sha384', 'composer-setup.php') === file_get_contents('composer.sig')) { echo 'Installer verified'.PHP_EOL; } else { echo 'Installer corrupt'.PHP_EOL; unlink('composer.sig'); unlink('composer-setup.php'); exit(1); }"
+    php composer-setup.php --install-dir=./ --filename=composer
+    php -r "unlink('composer.sig');"
+    php -r "unlink('composer-setup.php');"
 
     pushd .config
         # Link config dirs

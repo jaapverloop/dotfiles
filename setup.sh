@@ -17,10 +17,6 @@ fi
 # Disable brew analytics
 brew analytics off
 
-# Add other repositories to brew
-brew tap shivammathur/php
-brew tap shivammathur/extensions
-
 # Install packages with brew
 brew install \
     bat \
@@ -50,8 +46,8 @@ brew install \
     rar \
     redis \
     ripgrep \
-    shivammathur/extensions/xdebug@8.4 \
-    shivammathur/php/php@8.4 \
+    shivammathur/extensions/xdebug@8.5 \
+    shivammathur/php/php@8.5 \
     sqlite \
     tlrc \
     tmux \

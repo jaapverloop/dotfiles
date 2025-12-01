@@ -12,6 +12,7 @@ vim.opt.list = true
 vim.opt.listchars = 'tab:▸ ,trail:.'
 vim.opt.number = true
 vim.opt.numberwidth = 5
+vim.opt.relativenumber = true
 vim.opt.scrolloff = 5
 vim.opt.shiftround = true
 vim.opt.shiftwidth = 4

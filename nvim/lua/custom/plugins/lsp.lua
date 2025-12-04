@@ -5,7 +5,7 @@ return {
       'cssls',
       'eslint',
       'html',
-      'intelephense',
+      'phpactor',
       'tailwindcss',
       'pyright',
     },

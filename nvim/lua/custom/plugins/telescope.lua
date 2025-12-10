@@ -8,14 +8,19 @@ return {
     local actions = require('telescope.actions')
     local builtin = require('telescope.builtin')
 
+    local function send_to_loclist_and_open(prompt_bufnr)
+      actions.send_to_loclist(prompt_bufnr)
+      vim.cmd('lopen')
+    end
+
     telescope.setup {
       defaults = vim.tbl_deep_extend('force', themes.get_ivy(), {
         mappings = {
           i = {
-            ['<C-l>'] = actions.send_to_loclist,
+            ['<C-l>'] = send_to_loclist_and_open,
           },
           n = {
-            ['<C-l>'] = actions.send_to_loclist,
+            ['<C-l>'] = send_to_loclist_and_open,
           },
         },
       }),

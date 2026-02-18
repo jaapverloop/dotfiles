@@ -1,6 +1,5 @@
 -- change leader key
 vim.g.mapleader = ' '
-vim.g.maplocalleader = '\\'
 
 -- quit
 vim.keymap.set('n', '<leader>qq', '<cmd>qa!<CR>')

@@ -29,6 +29,7 @@ vim.opt.tabstop = 4
 vim.opt.updatetime = 300
 vim.opt.virtualedit = 'onemore'
 vim.opt.visualbell = true
+vim.opt.winborder = 'rounded'
 vim.opt.wrap = false
 
 -- Directory settings

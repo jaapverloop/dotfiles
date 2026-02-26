@@ -16,3 +16,5 @@ ehthumbs.db
 junk/
 
 __pycache__
+
+.phpactor.json

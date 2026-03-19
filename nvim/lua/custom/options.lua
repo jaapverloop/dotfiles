@@ -26,6 +26,7 @@ vim.opt.splitbelow = true
 vim.opt.splitkeep = 'screen'
 vim.opt.splitright = true
 vim.opt.tabstop = 4
+vim.opt.termguicolors = true
 vim.opt.updatetime = 300
 vim.opt.virtualedit = 'onemore'
 vim.opt.visualbell = true
@@ -33,9 +34,9 @@ vim.opt.winborder = 'rounded'
 vim.opt.wrap = false
 
 -- Directory settings
-vim.opt.backupdir = xdg_data_home .. "/nvim/backup//"
-vim.opt.directory = xdg_data_home .. "/nvim/swap//"
-vim.opt.undodir = xdg_data_home .. "/nvim/undo//"
+vim.opt.backupdir = xdg_data_home .. '/nvim/backup/'
+vim.opt.directory = xdg_data_home .. '/nvim/swap/'
+vim.opt.undodir = xdg_data_home .. '/nvim/undo/'
 
 -- Diagnostics
 vim.diagnostic.config({

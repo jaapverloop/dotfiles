@@ -3,7 +3,7 @@ return {
   config = function()
     require('lualine').setup({
       options = {
-        theme = 'catppuccin',
+        theme = 'catppuccin-nvim',
         icons_enabled = false,
         section_separators = '',
         component_separators = '┊',

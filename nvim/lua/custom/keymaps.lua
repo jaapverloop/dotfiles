@@ -1,17 +1,20 @@
 -- change leader key
 vim.g.mapleader = ' '
 
--- quit
-vim.keymap.set('n', '<leader>qq', '<cmd>qa!<CR>')
+-- quit buffer
+vim.keymap.set('n', '<leader>q', '<cmd>qa!<CR>')
 
 -- save buffer
 vim.keymap.set('n', '<leader>w', '<cmd>update<CR>')
 
 -- save buffer and close
-vim.keymap.set('n', '<leader>q', '<cmd>x<CR>')
+vim.keymap.set('n', '<leader>x', '<cmd>x<CR>')
 
 -- clear search
 vim.keymap.set('n', '<Esc>', '<cmd>noh<CR><Esc>')
+
+-- copy selection
+vim.keymap.set('v', '<leader>y', '"+y')
 
 -- navigate windows
 vim.keymap.set('n', '<C-h>', '<C-w>h')
@@ -38,12 +41,6 @@ vim.keymap.set('n', ']b', '<cmd>bnext<CR>')
 vim.keymap.set('n', '[B', '<cmd>bfirst<CR>')
 vim.keymap.set('n', ']B', '<cmd>blast<CR>')
 
--- navigate argument list
-vim.keymap.set('n', '[a', '<cmd>previous<CR>')
-vim.keymap.set('n', ']a', '<cmd>next<CR>')
-vim.keymap.set('n', '[A', '<cmd>first<CR>')
-vim.keymap.set('n', ']A', '<cmd>last<CR>')
-
 -- navigate quickfix list
 vim.keymap.set('n', '[q', '<cmd>cprevious<CR>')
 vim.keymap.set('n', ']q', '<cmd>cnext<CR>')
@@ -57,10 +54,10 @@ vim.keymap.set('n', '[L', '<cmd>lfirst<CR>')
 vim.keymap.set('n', ']L', '<cmd>llast<CR>')
 
 -- move line(s) up/down
-vim.keymap.set('n', '[e', '<cmd>m .-2<CR>==')
-vim.keymap.set('n', ']e', '<cmd>m .+1<CR>==')
-vim.keymap.set('v', '[e', ':m \'<-2<CR>gv=gv')
-vim.keymap.set('v', ']e', ':m \'>+1<CR>gv=gv')
+vim.keymap.set('n', '[[', '<cmd>m .-2<CR>==')
+vim.keymap.set('n', ']]', '<cmd>m .+1<CR>==')
+vim.keymap.set('v', '[[', ':m \'<-2<CR>gv=gv')
+vim.keymap.set('v', ']]', ':m \'>+1<CR>gv=gv')
 
 -- insert blank line above/below current line
 vim.keymap.set('n', '[<space>', 'printf(\'m`%sO<Esc>``\', v:count1)', { expr = true })

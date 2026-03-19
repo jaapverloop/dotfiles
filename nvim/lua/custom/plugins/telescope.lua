@@ -4,7 +4,6 @@ return {
   dependencies = { 'nvim-lua/plenary.nvim' },
   config = function()
     local telescope = require('telescope')
-    local themes = require('telescope.themes')
     local actions = require('telescope.actions')
     local builtin = require('telescope.builtin')
 
@@ -14,21 +13,16 @@ return {
     end
 
     telescope.setup {
-      defaults = vim.tbl_deep_extend('force', themes.get_ivy(), {
+      defaults = {
         mappings = {
-          i = {
-            ['<C-l>'] = send_to_loclist_and_open,
-          },
           n = {
             ['<C-l>'] = send_to_loclist_and_open,
           },
         },
-      }),
-
+      },
       pickers = {
         buffers = {
           mappings = {
-            i = { ['<c-d>'] = actions.delete_buffer },
             n = { ['<c-d>'] = actions.delete_buffer },
           }
         }

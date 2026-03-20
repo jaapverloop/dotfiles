@@ -46,6 +46,36 @@ sed -i '' 's#~/.config/yazi/Catppuccin-macchiato.tmTheme#~/.config/bat/themes/ca
 ## GPG Signing
 
 * Here you can find instuctions to setup [GPG Signing].
+* Below you can find instructions to extend the expiration date of a key.
+
+1. List keys
+
+```bash
+gpg --list-keys
+```
+
+2. Edit key
+
+```bash
+gpg --edit-key :ID
+```
+
+1. Extend the expiration date in the gpg> prompt
+
+```bash
+# 1. type action
+expire
+# 2. extend with one year
+1y
+# 3. save the key
+save
+```
+
+4. Export key
+
+```bash
+gpg --armor --export :ID | pbcopy
+```
 
 ## License
 

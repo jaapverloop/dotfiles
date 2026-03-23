@@ -16,6 +16,14 @@ vim.keymap.set('n', '<Esc>', '<cmd>noh<CR><Esc>')
 -- copy selection
 vim.keymap.set('v', '<leader>y', '"+y')
 
+-- split window
+vim.keymap.set('n', '<leader>sh', ':split<CR>')
+vim.keymap.set('n', '<leader>sv', ':vsplit<CR>')
+
+-- indent and reselected
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
+
 -- navigate windows
 vim.keymap.set('n', '<C-h>', '<C-w>h')
 vim.keymap.set('n', '<C-j>', '<C-w>j')

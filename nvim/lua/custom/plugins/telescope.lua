@@ -24,9 +24,12 @@ return {
         buffers = {
           mappings = {
             n = { ['<c-d>'] = actions.delete_buffer },
-          }
+          },
+        },
+        find_files = {
+          hidden = true,
         }
-      }
+      },
     }
 
     vim.keymap.set('n', '<leader>fb', builtin.buffers, {})

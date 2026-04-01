@@ -4,7 +4,9 @@ if not xdg_data_hone then
     xdg_data_home = vim.fn.expand('~/.local/share')
 end
 
+vim.opt.backup = false
 vim.opt.colorcolumn = '80'
+vim.opt.completeopt = 'menu,menuone,noselect'
 vim.opt.cursorline = true
 vim.opt.errorbells = false
 vim.opt.expandtab = true
@@ -12,6 +14,7 @@ vim.opt.list = true
 vim.opt.listchars = 'tab:▸ ,trail:.'
 vim.opt.number = true
 vim.opt.numberwidth = 5
+vim.opt.pumheight = 10
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 5
 vim.opt.shiftround = true
@@ -25,18 +28,16 @@ vim.opt.softtabstop = 4
 vim.opt.splitbelow = true
 vim.opt.splitkeep = 'screen'
 vim.opt.splitright = true
+vim.opt.swapfile = false
 vim.opt.tabstop = 4
 vim.opt.termguicolors = true
+vim.opt.undodir = xdg_data_home .. '/nvim/undo/'
 vim.opt.updatetime = 300
 vim.opt.virtualedit = 'onemore'
 vim.opt.visualbell = true
 vim.opt.winborder = 'rounded'
 vim.opt.wrap = false
-
--- Directory settings
-vim.opt.backupdir = xdg_data_home .. '/nvim/backup/'
-vim.opt.directory = xdg_data_home .. '/nvim/swap/'
-vim.opt.undodir = xdg_data_home .. '/nvim/undo/'
+vim.opt.writebackup = false
 
 -- Diagnostics
 vim.diagnostic.config({

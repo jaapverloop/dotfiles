@@ -1,6 +1,6 @@
 local xdg_data_home = os.getenv('XDG_DATA_HOME')
 
-if not xdg_data_hone then
+if not xdg_data_home then
     xdg_data_home = vim.fn.expand('~/.local/share')
 end
 

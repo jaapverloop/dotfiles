@@ -10,3 +10,5 @@ window-padding-y = 10
 window-theme = system
 macos-titlebar-proxy-icon = hidden
 macos-option-as-alt = left
+
+custom-shader = cursor_warp.glsl

@@ -18,3 +18,11 @@ vim.api.nvim_create_autocmd('CursorHold', {
     vim.diagnostic.open_float(nil, { focus = false })
   end,
 })
+
+-- highlight when yanking text
+vim.api.nvim_create_autocmd('TextYankPost', {
+  group = augroup,
+  callback = function()
+    vim.hl.on_yank()
+  end,
+})

@@ -44,7 +44,6 @@ brew install \
     pinentry-mac \
     psysh \
     python@3.14 \
-    rar \
     redis \
     ripgrep \
     shivammathur/extensions/xdebug@8.5 \

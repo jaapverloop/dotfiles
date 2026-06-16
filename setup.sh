@@ -20,6 +20,7 @@ brew analytics off
 # Install packages with brew
 brew install \
     bat \
+    composer \
     curl \
     eza \
     fd \
@@ -41,6 +42,7 @@ brew install \
     node-sass \
     oh-my-posh \
     pinentry-mac \
+    psysh \
     python@3.14 \
     rar \
     redis \
@@ -120,13 +122,6 @@ pushd ${HOME}
     # Create config dirs
     mkdir -p .config/bin
 
-    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-    php -r "copy('https://composer.github.io/installer.sig', 'composer.sig');"
-    php -r "if (hash_file('sha384', 'composer-setup.php') === file_get_contents('composer.sig')) { echo 'Installer verified'.PHP_EOL; } else { echo 'Installer corrupt'.PHP_EOL; unlink('composer.sig'); unlink('composer-setup.php'); exit(1); }"
-    php composer-setup.php --install-dir=./ --filename=composer
-    php -r "unlink('composer.sig');"
-    php -r "unlink('composer-setup.php');"
-
     pushd .config
         # Link config dirs
         for CONFIG_DIR in "${CONFIG_DIRS[@]}"
@@ -151,17 +146,11 @@ pushd ${HOME}
         deactivate
     popd
 
-    # Install PHP tools
-    composer global require psy/psysh
-    composer global require friendsofphp/php-cs-fixer
-
     pushd .config/bin
         ln -sf ${HOME}/.config/python-tools/bin/ansible-vault
         ln -sf ${HOME}/.config/python-tools/bin/fab
         ln -sf ${HOME}/.config/python-tools/bin/sphinx-build
         ln -sf ${HOME}/.config/python-tools/bin/sphinx-quickstart
-        ln -sf ${HOME}/.composer/vendor/bin/php-cs-fixer
-        ln -sf ${HOME}/.composer/vendor/bin/psysh
     popd
 popd
 

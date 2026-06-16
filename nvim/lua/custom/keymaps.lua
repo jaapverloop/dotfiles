@@ -62,10 +62,10 @@ vim.keymap.set('n', '[L', '<cmd>lfirst<CR>')
 vim.keymap.set('n', ']L', '<cmd>llast<CR>')
 
 -- move line(s) up/down
-vim.keymap.set('n', '[[', '<cmd>m .-2<CR>==')
-vim.keymap.set('n', ']]', '<cmd>m .+1<CR>==')
-vim.keymap.set('v', '[[', ':m \'<-2<CR>gv=gv')
-vim.keymap.set('v', ']]', ':m \'>+1<CR>gv=gv')
+vim.keymap.set('n', '<M-k>', '<cmd>m .-2<CR>==')
+vim.keymap.set('n', '<M-j>', '<cmd>m .+1<CR>==')
+vim.keymap.set('v', '<M-k>', ':m \'<-2<CR>gv=gv')
+vim.keymap.set('v', '<M-j>', ':m \'>+1<CR>gv=gv')
 
 -- insert blank line above/below current line
 vim.keymap.set('n', '[<space>', 'printf(\'m`%sO<Esc>``\', v:count1)', { expr = true })

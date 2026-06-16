@@ -1,15 +1,13 @@
-local xdg_data_home = os.getenv('XDG_DATA_HOME')
-
-if not xdg_data_home then
-    xdg_data_home = vim.fn.expand('~/.local/share')
-end
-
 vim.opt.backup = false
+vim.opt.cmdheight = 0
 vim.opt.colorcolumn = '80'
-vim.opt.completeopt = 'menu,menuone,noselect'
+vim.opt.completeopt = 'menu,menuone,noselect,fuzzy,nosort'
 vim.opt.cursorline = true
 vim.opt.errorbells = false
 vim.opt.expandtab = true
+vim.opt.ignorecase = true
+vim.opt.inccommand = 'split'
+vim.opt.laststatus = 2
 vim.opt.list = true
 vim.opt.listchars = 'tab:▸ ,trail:.'
 vim.opt.number = true
@@ -31,7 +29,7 @@ vim.opt.splitright = true
 vim.opt.swapfile = false
 vim.opt.tabstop = 4
 vim.opt.termguicolors = true
-vim.opt.undodir = xdg_data_home .. '/nvim/undo/'
+vim.opt.undodir = vim.fn.stdpath('data') .. '/undo'
 vim.opt.updatetime = 300
 vim.opt.virtualedit = 'onemore'
 vim.opt.visualbell = true

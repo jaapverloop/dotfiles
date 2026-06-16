@@ -47,6 +47,12 @@ return {
           vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
         end,
       })
+
+      -- Diagnostics
+      vim.diagnostic.config({
+        -- virtual_text = true,
+        severity_sort = true,
+      })
     end,
   },
   {

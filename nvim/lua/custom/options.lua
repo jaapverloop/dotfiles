@@ -36,12 +36,3 @@ vim.opt.visualbell = true
 vim.opt.winborder = 'rounded'
 vim.opt.wrap = false
 vim.opt.writebackup = false
-
--- Diagnostics
-vim.diagnostic.config({
-  virtual_text = false,
-  signs = true,
-  underline = true,
-  update_in_insert = false,
-  severity_sort = true,
-})

@@ -63,6 +63,7 @@ brew install \
 brew install --cask \
     boostnote \
     bruno \
+    claude-code \
     displaylink \
     docker \
     dropbox \

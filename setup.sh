@@ -52,6 +52,7 @@ brew install \
     tlrc \
     tmux \
     tokei \
+    tree-sitter-cli \
     yazi \
     zellij \
     zoxide \

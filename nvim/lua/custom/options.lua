@@ -1,5 +1,5 @@
 vim.opt.backup = false
-vim.opt.cmdheight = 0
+vim.opt.cmdheight = 1
 vim.opt.colorcolumn = '80'
 vim.opt.completeopt = 'menu,menuone,noselect,fuzzy,nosort'
 vim.opt.cursorline = true

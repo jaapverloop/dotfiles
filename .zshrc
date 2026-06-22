@@ -95,7 +95,9 @@ _fzf_compgen_dir() {
 }
 
 # Setup Zoxide (a smarter cd command)
-eval "$(zoxide init zsh)"
+if [[ -z "${CLAUDECODE}" ]]; then
+  eval "$(zoxide init zsh)"
+fi
 
 # Aliases
 alias cd='z'

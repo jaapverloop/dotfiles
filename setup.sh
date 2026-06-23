@@ -67,6 +67,7 @@ brew install --cask \
     claude-code \
     displaylink \
     docker \
+    docker-desktop \
     dropbox \
     figma \
     firefox \

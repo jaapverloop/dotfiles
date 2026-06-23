@@ -97,10 +97,10 @@ _fzf_compgen_dir() {
 # Setup Zoxide (a smarter cd command)
 if [[ -z "${CLAUDECODE}" ]]; then
   eval "$(zoxide init zsh)"
+  alias cd='z'
 fi
 
 # Aliases
-alias cd='z'
 alias lf='ls --long --all'
 alias la='ll --all'
 alias ll='ls --long --no-permissions --no-user --no-time --no-filesize'

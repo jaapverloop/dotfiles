@@ -41,6 +41,7 @@ brew install \
     node \
     node-sass \
     oh-my-posh \
+    phpantom-lsp \
     pinentry-mac \
     psysh \
     python@3.14 \

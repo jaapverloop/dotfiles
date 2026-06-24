@@ -16,7 +16,7 @@ return {
         'cssls',
         'eslint',
         'html',
-        'phpactor',
+        'phpantom_lsp',
         'tailwindcss',
         'pyright',
       },

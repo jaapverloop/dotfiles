@@ -32,6 +32,7 @@ brew install \
     gnupg \
     gpg2 \
     htop \
+    hunk \
     jesseduffield/lazydocker/lazydocker \
     jesseduffield/lazygit/lazygit \
     jq \
@@ -41,7 +42,9 @@ brew install \
     node \
     node-sass \
     oh-my-posh \
+    pass \
     phpantom-lsp \
+    pkgconf \
     pinentry-mac \
     psysh \
     python@3.14 \
@@ -64,10 +67,8 @@ brew install \
 # Install apps with brew
 brew install --cask \
     boostnote \
-    bruno \
     claude-code \
     displaylink \
-    docker \
     docker-desktop \
     dropbox \
     figma \
@@ -77,7 +78,6 @@ brew install --cask \
     fork \
     ghostty \
     google-chrome \
-    imageoptim \
     keeweb \
     microsoft-outlook \
     microsoft-teams \

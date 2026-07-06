@@ -71,7 +71,6 @@
       export HISTDUP=erase
       export LANG=en_US.UTF-8
       export LC_ALL=$LANG
-      export PATH="$HOME/.config/bin"
       export PATH="$PATH:/etc/profiles/per-user/$USER/bin"
       export PATH="$PATH:/run/current-system/sw/bin"
       export PATH="$PATH:/opt/homebrew/bin"

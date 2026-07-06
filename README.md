@@ -5,15 +5,40 @@ This repository contains my personal dotfiles.
 > [!NOTE]
 > Tailered for a machine running macOS.
 
+## Prerequisites
+
+Install the Command Line Tools. This runs in a separate window; wait for it to
+finish before continuing.
+
+```sh
+xcode-select --install
+```
+
+Install Nix.
+
+```sh
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --no-confirm
+```
+
+Open a new terminal so `nix` is on your `PATH`.
+
 ## Installation
 
 Open a terminal, navigate to the folder where you want to clone this repository,
-and execute the following commands:
+and clone it:
 
 ```sh
 git clone https://github.com/jaapverloop/dotfiles.git
 cd dotfiles
-bash setup.sh
+```
+
+Alternatively, if `git` is not installed yet, download the repository as a ZIP
+from [GitHub](https://github.com/jaapverloop/dotfiles) and extract it.
+
+Build the system with the following command:
+
+```sh
+./rebuild.sh
 ```
 
 ## Update
@@ -22,26 +47,18 @@ Open a terminal, navigate to the folder where this repository is cloned, and
 execute the following commands:
 
 ```sh
-cd dotfiles
 git pull
-bash setup.sh
+./rebuild.sh
 ```
 
 ## Catppuccin themes
 
 This repository uses the Catppuccin theme. To update the theme files, open a
 terminal, navigate to the folder where this repository is cloned and execute the
-following commands.
+following command.
 
 ```sh
-cd dotfiles
-mkdir -p {bat,delta,ghossty}/themes
-curl -Lo bat/themes/catppuccin-mocha.tmTheme https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme
-curl -Lo delta/themes/catppuccin.gitconfig https://github.com/catppuccin/delta/raw/main/catppuccin.gitconfig
-curl -Lo ghostty/themes/catppuccin-mocha.conf https://github.com/catppuccin/ghostty/raw/main/themes/catppuccin-mocha.conf
-curl -Lo ghostty/cursor_warp.glsl https://github.com/sahaj-b/ghostty-cursor-shaders/raw/main/cursor_warp.glsl
-curl -Lo yazi/theme.toml https://github.com/catppuccin/yazi/raw/main/themes/macchiato/catppuccin-macchiato-blue.toml
-sed -i '' 's#~/.config/yazi/Catppuccin-macchiato.tmTheme#~/.config/bat/themes/catppuccin-mocha.tmTheme#' yazi/theme.toml
+./update-theme.sh
 ```
 
 ## GPG Signing

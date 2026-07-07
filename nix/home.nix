@@ -146,19 +146,7 @@
       alias la='ll --all'
       alias ll='ls --long --no-permissions --no-user --no-time --no-filesize'
       alias ls='eza --color=always --icons=always --group-directories-first'
-      alias lzd='lazydocker'
-      alias lzg='lazygit'
       alias vim='nvim'
-
-      # Shell wrapper which automatically moves into the directory when exiting yazi.
-      function y() {
-          local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-          yazi "$@" --cwd-file="$tmp"
-          if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-              builtin cd -- "$cwd"
-          fi
-          rm -f -- "$tmp"
-      }
     '';
   };
 
@@ -166,7 +154,7 @@
     "bat".source = ../bat;
     "delta".source = ../delta;
     "ghostty".source = ../ghostty;
-    "git".source = ../git; # config + ignore
+    "git".source = ../git;
     "nvim".source = ../nvim;
     "oh-my-posh".source = ../oh-my-posh;
     "tmux".source = ../tmux;

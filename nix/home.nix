@@ -28,16 +28,6 @@
     tree-sitter
     yazi
     zoxide
-
-    (python314.withPackages (
-      ps: with ps; [
-        fabric
-        invoke
-        python-dotenv
-        sphinx
-        sphinx-rtd-theme
-      ]
-    ))
   ];
 
   home.file = {

@@ -41,6 +41,20 @@
     autosuggestion.enable = true; # ghost text from history
     syntaxHighlighting.enable = true;
 
+    # Only rebuild the completion dump once a day (and skip the security
+    # audit) instead of on every shell launch.
+    completionInit = ''
+      autoload -Uz compinit
+      _zdump=''${ZDOTDIR:-$HOME}/.zcompdump
+      _zfresh=( $_zdump(N.mh-24) )
+      if (( $#_zfresh )); then
+        compinit -C -d "$_zdump"
+      else
+        compinit -d "$_zdump"
+      fi
+      unset _zdump _zfresh
+    '';
+
     history = {
       path = "$HOME/.zsh_history";
       size = 5000;

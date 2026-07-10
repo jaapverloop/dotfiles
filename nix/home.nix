@@ -15,6 +15,7 @@
     glow
     htop
     jq
+    just
     lazydocker
     lazygit
     neovim

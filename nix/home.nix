@@ -5,6 +5,7 @@
   home.packages = with pkgs; [
     ansible
     bat
+    clang-tools
     curl
     delta
     eza
@@ -23,10 +24,13 @@
     pass
     phpantom-lsp
     pkgconf
+    pyright
     ripgrep
     sqlite
+    tailwindcss-language-server
     tmux
     tree-sitter
+    vscode-langservers-extracted
     yazi
     zoxide
   ];

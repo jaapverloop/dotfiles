@@ -1,17 +1,18 @@
 return {
   {
-    'mason-org/mason.nvim',
-    build = ':MasonUpdate',
-  },
-  {
-    'mason-org/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig',
     dependencies = {
-      'mason-org/mason.nvim',
-      'neovim/nvim-lspconfig',
       'saghen/blink.cmp',
     },
-    opts = {
-      ensure_installed = {
+    config = function()
+      -- Apply blink completion capabilities to every server.
+      vim.lsp.config('*', {
+        capabilities = require('blink.cmp').get_lsp_capabilities(),
+      })
+
+      -- Servers are installed via Nix (see nix/home.nix), so we just enable
+      -- them here. vim.lsp.enable loads lsp/<name>.lua from nvim-lspconfig.
+      vim.lsp.enable({
         'clangd',
         'cssls',
         'eslint',
@@ -19,26 +20,11 @@ return {
         'phpantom_lsp',
         'tailwindcss',
         'pyright',
-      },
-      automatic_enable = true,
-    },
-    config = function(_, opts)
-      require('mason').setup()
-      require('mason-lspconfig').setup(opts)
-
-      local capabilities = require('blink.cmp').get_lsp_capabilities()
-      local lspconfig = require('lspconfig')
-
-      lspconfig.util.default_config = vim.tbl_extend(
-        'force',
-        lspconfig.util.default_config,
-        { capabilities = capabilities }
-      )
+      })
 
       vim.api.nvim_create_autocmd('LspAttach', {
         callback = function(event)
-          local buf = event.buf
-          local opts = { buffer = buf }
+          local opts = { buffer = event.buf }
 
           vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
           vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)

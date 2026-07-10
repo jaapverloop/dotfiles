@@ -23,6 +23,8 @@
   users.users.${username}.home = "/Users/${username}";
   programs.zsh.enable = true;
 
+  environment.variables.HOMEBREW_NO_ANALYTICS = "1";
+
   homebrew = {
     enable = true;
 

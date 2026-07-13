@@ -4,6 +4,7 @@ return {
     picker = {
       layout = {
         preview = false,
+        border = "rounded",
       },
     },
   },

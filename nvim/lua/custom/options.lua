@@ -33,6 +33,5 @@ vim.opt.undodir = vim.fn.stdpath('data') .. '/undo'
 vim.opt.updatetime = 300
 vim.opt.virtualedit = 'onemore'
 vim.opt.visualbell = true
-vim.opt.winborder = 'rounded'
 vim.opt.wrap = false
 vim.opt.writebackup = false

@@ -35,11 +35,6 @@
     zoxide
   ];
 
-  home.file = {
-    ".editorconfig".source = ../.editorconfig;
-    ".hushlogin".source = ../.hushlogin;
-  };
-
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -167,16 +162,5 @@
       alias ls='eza --color=always --icons=always --group-directories-first'
       alias vim='nvim'
     '';
-  };
-
-  xdg.configFile = {
-    "bat".source = ../bat;
-    "delta".source = ../delta;
-    "ghostty".source = ../ghostty;
-    "git".source = ../git;
-    "nvim".source = ../nvim;
-    "oh-my-posh".source = ../oh-my-posh;
-    "tmux".source = ../tmux;
-    "yazi".source = ../yazi;
   };
 }

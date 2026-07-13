@@ -35,7 +35,7 @@ cd dotfiles
 Alternatively, if `git` is not installed yet, download the repository as a ZIP
 from [GitHub](https://github.com/jaapverloop/dotfiles) and extract it.
 
-Build the system with the following command:
+Build the system with the following command and follow the instructions:
 
 ```sh
 ./rebuild.sh

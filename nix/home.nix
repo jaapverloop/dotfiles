@@ -25,6 +25,7 @@
     pass
     phpantom-lsp
     pkgconf
+    prek
     pyright
     ripgrep
     sqlite

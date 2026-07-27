@@ -68,6 +68,7 @@
       "sublime-text"
       "telegram"
       "transmit"
+      "unifi-identity-endpoint"
       "visual-studio-code"
       "vlc"
       "webtorrent"

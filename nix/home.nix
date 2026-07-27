@@ -11,6 +11,7 @@
     eza
     fd
     fzf
+    gh
     git
     git-lfs
     glow

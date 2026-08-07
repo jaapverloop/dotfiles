@@ -37,6 +37,7 @@
     taps = builtins.attrNames config.nix-homebrew.taps;
 
     brews = [
+      "coderabbitai/tap/git-gtr"
       "gnupg"
       "hunk"
       "mariadb"

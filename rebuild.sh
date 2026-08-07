@@ -18,7 +18,7 @@ fi
 sudo darwin-rebuild switch --flake "${FLAKE}"
 
 CONFIG_HOME="${XDG_CONFIG_HOME:-${HOME}/.config}"
-config_dirs=(bat delta ghostty git nvim oh-my-posh tmux yazi)
+config_dirs=(bat delta ghostty git hunk nvim oh-my-posh tmux yazi)
 config_files=(.editorconfig .hushlogin)
 
 mkdir -p "${CONFIG_HOME}"

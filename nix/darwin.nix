@@ -37,11 +37,11 @@
     taps = builtins.attrNames config.nix-homebrew.taps;
 
     brews = [
-      "mariadb"
-      "redis"
       "gnupg"
-      "pinentry-mac"
       "hunk"
+      "mariadb"
+      "pinentry-mac"
+      "redis"
     ];
 
     casks = [

@@ -1,0 +1,35 @@
+onboarding = false
+
+[theme]
+name = "catppuccin"
+
+[ui]
+agent_panel_sort = "spaces"
+
+[ui.sound]
+enabled = false
+
+# Custom commands run in the focused pane's cwd.
+[[keys.command]]
+key = "prefix+ctrl+g"
+type = "popup"
+command = "lazygit"
+description = "lazygit"
+width = "96%"
+height = "96%"
+
+[[keys.command]]
+key = "prefix+ctrl+d"
+type = "popup"
+command = "lazydocker"
+description = "lazydocker"
+width = "96%"
+height = "96%"
+
+[[keys.command]]
+key = "prefix+ctrl+y"
+type = "popup"
+command = "yazi"
+description = "yazi"
+width = "96%"
+height = "96%"

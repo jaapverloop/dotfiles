@@ -39,6 +39,7 @@
     brews = [
       "coderabbitai/tap/git-gtr"
       "gnupg"
+      "herdr"
       "hunk"
       "mariadb"
       "pinentry-mac"

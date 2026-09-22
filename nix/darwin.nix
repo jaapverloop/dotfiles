@@ -47,7 +47,6 @@
     ];
 
     casks = [
-      "boost-note"
       "claude-code"
       "docker-desktop"
       "dropbox"

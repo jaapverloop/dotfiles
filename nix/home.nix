@@ -15,6 +15,7 @@
     gh
     git
     git-lfs
+    gitleaks
     glow
     htop
     jq

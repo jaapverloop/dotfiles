@@ -32,6 +32,7 @@
     sqlite
     tailwindcss-language-server
     tmux
+    tokei
     tree-sitter
     vscode-langservers-extracted
     yazi
